@@ -1,0 +1,51 @@
+/* fonts */
+
+@font-face {
+  font-style: normal;
+  font-weight: 400;
+  font-family: "DM Sans";
+
+  font-display: swap;
+  src: url("./../../fonts/DMSans-Regular.woff2") format("woff2"), url("./../../fonts/DMSans-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 500;
+  font-family: "DM Sans";
+
+  font-display: swap;
+  src: url("./../../fonts/DMSans-Medium.woff2") format("woff2"), url("./../../fonts/DMSans-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "DM Sans";
+
+  font-display: swap;
+  src: url("./../../fonts/DMSans-Bold.woff2") format("woff2"), url("./../../fonts/DMSans-Bold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 600;
+  font-family: "Nunito";
+
+  font-display: swap;
+  src: url("./../../fonts/Nunito-SemiBold.woff2") format("woff2"), url("./../../fonts/Nunito-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-style: normal;
+  font-weight: 700;
+  font-family: "Nunito";
+
+  font-display: swap;
+  src: url("./../../fonts/Nunito-Bold.woff2") format("woff2"), url("./../../fonts/Nunito-Bold.woff") format("woff");
+}
+
+:root {
+  --DMSans: "DM Sans", "Trebuchet MS", sans-serif;
+  --Nunito: "Nunito", "Tahoma", sans-serif;
+}

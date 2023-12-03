@@ -1,0 +1,15 @@
+/* colors */
+:root {
+  --main-black: #1A1A1A;
+  --secondary-black: #4A4A4A;
+  --main-white: #FFFFFF;
+  --main-white-transparent-1: rgba(255,255,255,0.54);
+  --main-white-transparent-2: rgba(255,255,255,0.50);
+  --main-white-transparent-3: rgba(255,255,255,0.31);
+  --dark-green: #001B04;
+  --middle-green-1: #135D1D;
+  --middle-green-2: #066F14;
+  --middle-green-2-transparent: rgba(6,111,20, 0.7);
+  --light-green: #519A5A;
+  --accent-yellow: #F4C300;
+}

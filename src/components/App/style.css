@@ -1,0 +1,40 @@
+/* base config */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: var(--DMSans);
+  font-weight: 400;
+  color: var(--secondary-black);
+  background-color: var(--main-white);
+}
+
+button, a {
+  text-decoration: none;
+  color: inherit;
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+button:hover,
+a:hover {
+  opacity: 0.6;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid var(--main-black);
+}
+
+button:active,
+a:active {
+  opacity: 0.4;
+}
+
+.container {
+  max-width: 1152px;
+  margin: 0 auto;
+}

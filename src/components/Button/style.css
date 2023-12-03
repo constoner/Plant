@@ -1,0 +1,21 @@
+.button {
+  padding: 16px 32px;
+  font-family: var(--DMSans);
+  font-size: 18px;
+  font-weight: 500;
+  color: var(--main-white);
+  background-color: var(--middle-green-2);
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.button--small {
+    padding: 12px 16px;
+    font-size: 14px;
+}
+
+.button:disabled {
+  background-color: var(--secondary-black);
+}
