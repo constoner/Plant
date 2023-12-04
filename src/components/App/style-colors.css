@@ -2,6 +2,7 @@
 :root {
   --main-black: #1A1A1A;
   --secondary-black: #4A4A4A;
+  --additional-grey: #5A5A5A;
   --main-white: #FFFFFF;
   --main-white-transparent-1: rgba(255,255,255,0.54);
   --main-white-transparent-2: rgba(255,255,255,0.50);
@@ -11,5 +12,6 @@
   --middle-green-2: #066F14;
   --middle-green-2-transparent: rgba(6,111,20, 0.7);
   --light-green: #519A5A;
+  --ghost-green: #EDFFDD;
   --accent-yellow: #F4C300;
 }
