@@ -39,14 +39,14 @@ const Header = () => {
           </ul>
           <ul className="header__user-menu user-menu">
             <li className="user-menu__item">
-              <a className="user-menu__link" href="./">
+              <a className="user-menu__link" href="#!">
                 Login
               </a>
             </li>
             <li className="user-menu__item">
               <Button
                 className="user-menu__link user-menu__link button button--small"
-                href=""
+                href="#!"
               >
                 Sign Up
               </Button>

@@ -1,6 +1,7 @@
 /* colors */
 :root {
   --main-black: #1A1A1A;
+  --transparent-black: rgba(0, 0, 0, 0.34);
   --secondary-black: #4A4A4A;
   --additional-grey: #5A5A5A;
   --main-white: #FFFFFF;
