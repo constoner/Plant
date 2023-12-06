@@ -6,6 +6,8 @@ import "./style.css";
 import Header from "../Header/Header";
 import Aside from "../Aside/Aside";
 import Footer from "../Footer/Footer";
+import SmallSection from "../SmallSection/SmallSection";
+import Subscribe from "../Subscribe/Subscribe";
 
 const App = () => {
   return (
@@ -46,6 +48,9 @@ const App = () => {
             perferendis nostrum debitis! Magnam repellendus consequatur saepe
             eaque impedit?
           </p>
+          <SmallSection>
+            <Subscribe />
+          </SmallSection>
           <Aside />
         </div>
       </main>

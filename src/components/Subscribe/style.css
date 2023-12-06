@@ -1,0 +1,15 @@
+.subscribe {
+  width: 100%;
+}
+
+.subscribe__title {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 40px;
+}
+
+.subscribe__text {
+  width: 510px;
+  margin: 0;
+  margin-bottom: 30px;
+}

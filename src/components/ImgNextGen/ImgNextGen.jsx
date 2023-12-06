@@ -1,6 +1,7 @@
 import React from "react";
 
 const ImgNextGen = ({
+  className = null,
   srcWebpX2 = null,
   srcWebp = null,
   srcJpgX2 = null,
@@ -15,14 +16,15 @@ const ImgNextGen = ({
   return (
     <picture>
       {srcWebpX2 ? (
-        <source type="image/webp" srcset={`${srcWebpX2} 2x`}></source>
+        <source type="image/webp" srcSet={`${srcWebpX2} 2x`}></source>
       ) : null}
       {srcWebp ? (
-        <source type="image/webp" srcset={`${srcWebp}`}></source>
+        <source type="image/webp" srcSet={`${srcWebp}`}></source>
       ) : null}
       <img
+        className={className}
         src={fallback}
-        srcset={`${fallback}, ${srcJpgX2} 2x`}
+        srcSet={`${fallback}, ${srcJpgX2} 2x`}
         alt={alt}
         {...props}
       />
