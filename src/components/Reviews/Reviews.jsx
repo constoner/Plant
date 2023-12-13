@@ -2,6 +2,7 @@ import React from "react";
 import "./style.css";
 
 import ImgNextGen from "../ImgNextGen/ImgNextGen";
+import SwiperContainer from "../SwiperContainer/SwiperContainer";
 
 const Reviews = () => {
   return (
@@ -14,7 +15,7 @@ const Reviews = () => {
             accumsan sit amet nunc cursus. Nec tristique at in erat lectus mas
             sa diam. Lectus elit, nulla elementum fringilla at.
           </p>
-          <ul className="reviews__list swiper"></ul>
+          <SwiperContainer className="reviews__swiper" />
         </div>
         <div className="reviews__image">
           <ImgNextGen

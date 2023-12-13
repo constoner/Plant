@@ -1,0 +1,85 @@
+.swiper {
+  position: relative;
+  width: 597px;
+  height: 204px;
+  background-color: var(--middle-green-2);
+}
+
+.swiper::before {
+  position: absolute;
+  z-index: 5;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0 0 16px 16px var(--middle-green-2) inset;
+  content: "";
+  pointer-events: none;
+}
+
+.swiper ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+.swiper li {
+  margin: 0;
+  padding: 0;
+}
+
+.swiper button {
+  position: absolute;
+  z-index: 5;
+  bottom: 0;
+  right: 0;
+  width: 24px;
+  height: 24px;
+  margin: 0;
+  padding: 0;
+  color: var(--main-black);
+  background-color: var(--main-white);
+  cursor: pointer;
+  border: none;
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+.swiper button:hover {
+  opacity: 0.6;
+}
+
+.swiper button:focus {
+  outline: none;
+}
+
+.swiper button:focus-visible {
+  box-shadow: 0 0 0 2px var(--main-black) inset;
+}
+
+.swiper button:active {
+  opacity: 0.2;
+}
+
+.swiper .prev {
+  right: 24px;
+}
+
+.swiper .prev svg {
+  transform: rotate(180deg);
+}
+
+.swiper button:disabled {
+  opacity: 1 !important;
+  color: var(--faded-green);
+  background-color: var(--additional-dark-green);
+}
+
+.swiper button svg {
+  position: absolute;
+  top: 8px;
+  left: 6px;
+  display: block;
+}
+
