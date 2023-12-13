@@ -4,6 +4,7 @@ import "./style-colors.css";
 import "./style.css";
 
 import Header from "../Header/Header";
+import Reviews from "../Reviews/Reviews";
 import Aside from "../Aside/Aside";
 import Footer from "../Footer/Footer";
 import SmallSection from "../SmallSection/SmallSection";
@@ -48,8 +49,9 @@ const App = () => {
             perferendis nostrum debitis! Magnam repellendus consequatur saepe
             eaque impedit?
           </p>
+          <Reviews id="reviews" />
           <SmallSection>
-            <Subscribe />
+            <Subscribe id="subscribe" />
           </SmallSection>
           <Aside />
         </div>
