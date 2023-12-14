@@ -40,7 +40,7 @@ const Footer = () => {
               <p className="nav-column__title">Navigation</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#home">
+                  <a className="nav-column__link" href="./">
                     Home
                   </a>
                 </li>
