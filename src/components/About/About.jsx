@@ -5,6 +5,7 @@ import { initAccordions } from "../../vendor/accordions/init-accordion";
 import "../../vendor/accordions/data-accordion.css";
 
 import ImgNextGen from "../ImgNextGen/ImgNextGen";
+import Button from "../Button/Button";
 
 window.addEventListener("DOMContentLoaded", () => {
   window.addEventListener("load", () => {
@@ -56,14 +57,15 @@ const About = () => {
             data-accordion="element"
             ref={accordionRef}
           >
-            <button
-              className="about__button button accordion__button"
+            <Button
+              className="about__button accordion__button"
               type="button"
+              variant="button"
               data-accordion="button"
               onClick={() => onButtonClick(accordionRef)}
             >
               {value}
-            </button>
+            </Button>
             <div className="accordion__content" data-accordion="content">
               <div className="accordion__wrapper">
                 <p>

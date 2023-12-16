@@ -45,7 +45,9 @@ const Header = () => {
             </li>
             <li className="user-menu__item">
               <Button
-                className="user-menu__link user-menu__link button button--small"
+                className="user-menu__link user-menu__link"
+                variant="a"
+                isSmall={true}
                 href="#!"
               >
                 Sign Up

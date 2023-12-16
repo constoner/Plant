@@ -1,9 +1,9 @@
 import React from "react";
-import "./style-fonts.css";
 import "./style-colors.css";
 import "./style.css";
 
 import Header from "../Header/Header";
+import Hero from "../Hero/Hero";
 import Collections from "../Collections/Collections";
 import About from "../About/About";
 import Reviews from "../Reviews/Reviews";
@@ -18,6 +18,7 @@ const App = () => {
       <Header />
       <main>
         <div className="container">
+          <Hero />
           <Collections id="collections" />
           <About id="about" />
           <Reviews id="reviews" />

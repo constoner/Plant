@@ -1,6 +1,8 @@
 import React, { useRef, useState } from "react";
 import "./style.css";
 
+import Button from "../Button/Button";
+
 const TextInput = ({
   className,
   placeholder,
@@ -38,13 +40,15 @@ const TextInput = ({
         value={value}
         onChange={(evt) => setValue(evt.target.value)}
       />
-      <button
-        className="text-input__button button button--small"
+      <Button
+        className="text-input__button"
+        variant="button"
+        isSmall={true}
         type="submit"
         onClick={(evt) => buttonCB(evt, inputRef, formRef)}
       >
         {button}
-      </button>
+      </Button>
     </form>
   );
 };

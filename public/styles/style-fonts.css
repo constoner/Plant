@@ -6,7 +6,7 @@
   font-family: "DM Sans";
 
   font-display: swap;
-  src: url("./../../fonts/DMSans-Regular.woff2") format("woff2"), url("./../../fonts/DMSans-Regular.woff") format("woff");
+  src: url("./../fonts/DMSans-Regular.woff2") format("woff2"), url("./../fonts/DMSans-Regular.woff") format("woff");
 }
 
 @font-face {
@@ -15,7 +15,7 @@
   font-family: "DM Sans";
 
   font-display: swap;
-  src: url("./../../fonts/DMSans-Medium.woff2") format("woff2"), url("./../../fonts/DMSans-Medium.woff") format("woff");
+  src: url("./../fonts/DMSans-Medium.woff2") format("woff2"), url("./../fonts/DMSans-Medium.woff") format("woff");
 }
 
 @font-face {
@@ -24,7 +24,7 @@
   font-family: "DM Sans";
 
   font-display: swap;
-  src: url("./../../fonts/DMSans-Bold.woff2") format("woff2"), url("./../../fonts/DMSans-Bold.woff") format("woff");
+  src: url("./../fonts/DMSans-Bold.woff2") format("woff2"), url("./../fonts/DMSans-Bold.woff") format("woff");
 }
 
 @font-face {
@@ -33,7 +33,7 @@
   font-family: "Nunito";
 
   font-display: swap;
-  src: url("./../../fonts/Nunito-SemiBold.woff2") format("woff2"), url("./../../fonts/Nunito-SemiBold.woff") format("woff");
+  src: url("./../fonts/Nunito-SemiBold.woff2") format("woff2"), url("./../fonts/Nunito-SemiBold.woff") format("woff");
 }
 
 @font-face {

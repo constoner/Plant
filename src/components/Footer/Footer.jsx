@@ -3,7 +3,6 @@ import "./style.css";
 
 import Logo from "../Logo/Logo";
 import Icon from "../Icon/Icon";
-import Social from "../../images/vector/social.svg";
 
 const Footer = () => {
   return (
@@ -19,17 +18,32 @@ const Footer = () => {
             <ul className="footer__social-list social">
               <li className="social__item">
                 <a className="social__link" href="#!" aria-label="Facebook.">
-                  <Icon sprite={Social} id="fb" width="12" height="22" />
+                  <Icon
+                    sprite="./images/vector/logos.svg"
+                    id="fb"
+                    width="12"
+                    height="22"
+                  />
                 </a>
               </li>
               <li className="social__item">
                 <a className="social__link" href="#!" aria-label="Twitter.">
-                  <Icon sprite={Social} id="tw" width="22" height="18" />
+                  <Icon
+                    sprite="./images/vector/logos.svg"
+                    id="tw"
+                    width="22"
+                    height="18"
+                  />
                 </a>
               </li>
               <li className="social__item">
                 <a className="social__link" href="#!" aria-label="Instagram.">
-                  <Icon sprite={Social} id="inst" width="20" height="20" />
+                  <Icon
+                    sprite="./images/vector/logos.svg"
+                    id="inst"
+                    width="20"
+                    height="20"
+                  />
                 </a>
               </li>
             </ul>

@@ -1,7 +1,9 @@
 .header {
+  z-index: 10;
   min-height: 122px;
   padding-top: 40px;
   padding-bottom: 44px;
+  background-color: var(--main-white);
 }
 
 .header__nav {
