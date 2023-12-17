@@ -1,9 +1,9 @@
 import React from "react";
 
-const Icon = ({ sprite, id, width, height, ...props }) => {
+const Icon = ({ sprite, name, width, height, ...props }) => {
   return (
     <svg width={width} height={height} {...props}>
-      <use href={`${sprite}#${id}`}></use>
+      <use href={`${sprite}#${name}`}></use>
     </svg>
   );
 };

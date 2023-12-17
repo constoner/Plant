@@ -15,7 +15,7 @@ const Collections = () => {
           See all collection
           <Icon
             sprite="./images/vector/icons.svg"
-            id="arrow"
+            name="arrow"
             width={16}
             height={11}
             aria-hidden={true}
@@ -31,6 +31,7 @@ const Collections = () => {
             aria-hidden={true}
             width="180"
             height="180"
+            alt="."
           />
         </div>
         <div className="colection__image-wrapper">
@@ -41,6 +42,7 @@ const Collections = () => {
             aria-hidden={true}
             width="180"
             height="180"
+            alt="."
           />
         </div>
         <div className="colection__image-wrapper">
@@ -51,6 +53,7 @@ const Collections = () => {
             aria-hidden={true}
             width="180"
             height="180"
+            alt="."
           />
         </div>
       </div>

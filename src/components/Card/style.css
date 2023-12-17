@@ -1,0 +1,52 @@
+.card {
+  position: relative;
+  padding: 169px 32px 29px;
+}
+
+.card__image {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 100%;
+  height: 153px;
+}
+
+.card__image img {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: auto;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  transform: translateX(-50%);
+}
+
+.card__title {
+  display: block;
+  margin: 0;
+  margin-bottom: 10px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 28px;
+}
+
+.card__rank {
+  display: flex;
+  height: 16px;
+  margin-bottom: 12px;
+}
+
+.card__rank svg {
+  display: block;
+  margin: 0;
+  margin-right: 4px;
+}
+
+.card__price {
+  margin: 0;
+  font-family: var(--Nunito);
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 19px;
+}

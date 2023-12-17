@@ -20,16 +20,16 @@ const Hero = () => {
         </Button>
         <dl className="hero__achievements">
           <div className="hero__achievements-container">
-            <dd>2000+</dd>
             <dt>Delivety</dt>
+            <dd>2000+</dd>
           </div>
           <div className="hero__achievements-container">
-            <dd>1200+</dd>
             <dt>Customers</dt>
+            <dd>1200+</dd>
           </div>
           <div className="hero__achievements-container">
-            <dd>1000+</dd>
             <dt>Product</dt>
+            <dd>1000+</dd>
           </div>
         </dl>
         <img

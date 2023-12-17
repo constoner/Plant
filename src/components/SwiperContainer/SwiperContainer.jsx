@@ -39,7 +39,7 @@ const SwiperContainer = ({ className }) => {
       <button className="prev" aria-label="Previous review">
         <Icon
           sprite="./images/vector/icons.svg"
-          id="arrow"
+          name="arrow"
           width="10"
           height="7"
           aria-hidden={true}
@@ -48,7 +48,7 @@ const SwiperContainer = ({ className }) => {
       <button className="next" aria-label="Next review">
         <Icon
           sprite="./images/vector/icons.svg"
-          id="arrow"
+          name="arrow"
           width="10"
           height="7"
           aria-hidden={true}

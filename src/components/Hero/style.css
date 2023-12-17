@@ -55,10 +55,13 @@
 }
 
 .hero__achievements-container {
+  display: flex;
+  flex-direction: column;
   text-align: center;
 }
 
 .hero__achievements dd {
+  order: -1;
   margin: 0;
   margin-bottom: 10px;
   font-family: var(--Nunito);

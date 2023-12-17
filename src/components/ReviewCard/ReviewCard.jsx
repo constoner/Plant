@@ -8,10 +8,9 @@ const ReviewCard = ({ name, description, text, avatar }) => {
     <div className="review-card">
       <Icon
         sprite="./images/vector/icons.svg"
-        id="quotation"
+        name="quotation"
         width="40"
         height="40"
-        alt=""
         aria-hidden={true}
       />
       <div className="review-card__header">

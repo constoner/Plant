@@ -1,0 +1,21 @@
+.catalog {
+  padding: 64px 0;
+}
+
+.catalog__title {
+  margin: 0;
+  margin-bottom: 24px;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 125%;
+  text-align: center;
+}
+
+.catalog__tabs {
+  margin-bottom: 40px;
+}
+
+.catalog__button {
+  display: block;
+  margin: 0 auto;
+}

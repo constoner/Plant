@@ -6,6 +6,7 @@ import Header from "../Header/Header";
 import Hero from "../Hero/Hero";
 import Collections from "../Collections/Collections";
 import About from "../About/About";
+import Catalog from "../Catalog/Catalog";
 import Reviews from "../Reviews/Reviews";
 import Aside from "../Aside/Aside";
 import Footer from "../Footer/Footer";
@@ -21,6 +22,7 @@ const App = () => {
           <Hero />
           <Collections id="collections" />
           <About id="about" />
+          <Catalog id="catalog" />
           <Reviews id="reviews" />
           <SmallSection>
             <Subscribe id="subscribe" />
