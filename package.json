@@ -1,5 +1,6 @@
 {
-  "name": "webpage_w_react-router",
+  "homepage": "https://constoner.github.io/plant/",
+  "name": "plant",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
