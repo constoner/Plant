@@ -28,7 +28,6 @@ const Aside = () => {
       .then((response) => {
         return response.json();
       })
-      .then((data) => data)
       .then((data) => setGalleryData(data))
       .catch((e) =>
         console.warn(

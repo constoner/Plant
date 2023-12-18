@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
@@ -6,8 +6,44 @@ import "./style.css";
 
 import ReviewCard from "../ReviewCard/ReviewCard";
 import Icon from "../Icon/Icon";
+import Loading from "../Loading/Loading";
 
 const SwiperContainer = ({ className }) => {
+  const [reviewsData, setReviewsData] = useState([]);
+
+  const getData = () => {
+    fetch(process.env.PUBLIC_URL + "/data/reviews.json", {
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json",
+      },
+    })
+      .then((response) => {
+        if (response.status >= 200 && response.status < 300) {
+          return response;
+        } else {
+          let error = new Error(
+            "Server is not responding. Please, reload the page"
+          );
+          error.response = response;
+          throw error;
+        }
+      })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => setReviewsData(data))
+      .catch((e) =>
+        console.warn(
+          "Data is corrupted. Please, reload the page" + ", " + e.message
+        )
+      );
+  };
+
+  useEffect(() => {
+    getData();
+  }, []);
+
   return (
     <Swiper
       className={className}
@@ -20,22 +56,28 @@ const SwiperContainer = ({ className }) => {
         nextEl: ".next",
       }}
     >
-      <SwiperSlide tag="li">
-        <ReviewCard
-          name="Hasanul Islam"
-          description="Marketing CEO"
-          avatar="/images/reviews/review-1.jpg"
-          text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, tempor, accumsan sit amet nunc cursus. Nec tristique at in erat lectus mas sa diam. Lectus elit, nulla elementum fringilla at."
-        />
-      </SwiperSlide>
-      <SwiperSlide tag="li">
-        <ReviewCard
-          name="Jane Doe"
-          description="Creative producer"
-          avatar="/images/reviews/review-2.jpg"
-          text="Converge are awesome!"
-        />
-      </SwiperSlide>
+      {reviewsData.length ? (
+        reviewsData.map((item, index) => {
+          return (
+            <SwiperSlide tag="li" key={index}>
+              <ReviewCard
+                name={item.name}
+                description={item.description}
+                avatar={item.avatar}
+                text={item.text}
+              />
+            </SwiperSlide>
+          );
+        })
+      ) : (
+        <SwiperSlide tag="li">
+          <Loading
+            width="100%"
+            height="100%"
+            value="Reviews about us will appear here soon"
+          />
+        </SwiperSlide>
+      )}
       <button className="prev" aria-label="Previous review">
         <Icon
           sprite="/images/vector/icons.svg"
