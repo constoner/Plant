@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Jim Parker",
+    "description": "Marketing CEO",
+    "avatar": "/images/reviews/review-1.jpg",
+    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, tempor, accumsan sit amet nunc cursus. Nec tristique at in erat lectus mas sa diam. Lectus elit, nulla elementum fringilla at."
+  },
+  {
+    "name": "Jane Doe",
+    "description": "Creative producer",
+    "avatar": "/images/reviews/review-2.jpg",
+    "text": "Converge are awesome!"
+  },
+  {
+    "name": "Constantin Kalinin",
+    "description": "Average Fronend Enjoyer",
+    "avatar": "/images/reviews/review-3.jpg",
+    "text": "Hello World! I'm learning React."
+  }
+]
