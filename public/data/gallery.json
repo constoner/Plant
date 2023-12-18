@@ -1,0 +1,27 @@
+[
+  {
+    "src1x": "/images/gallery/gallery-1.jpg",
+    "src2x": "/images/gallery/gallery-1@2x.jpg",
+    "href": "gallery-1!"
+  },
+  {
+    "src1x": "/images/gallery/gallery-2.jpg",
+    "src2x": "/images/gallery/gallery-2@2x.jpg",
+    "href": "gallery-2!"
+  },
+  {
+    "src1x": "/images/gallery/gallery-3.jpg",
+    "src2x": "/images/gallery/gallery-3@2x.jpg",
+    "href": "gallery-3!"
+  },
+  {
+    "src1x": "/images/gallery/gallery-4.jpg",
+    "src2x": "/images/gallery/gallery-4@2x.jpg",
+    "href": "gallery-4!"
+  },
+  {
+    "src1x": "/images/gallery/gallery-5.jpg",
+    "src2x": "/images/gallery/gallery-5@2x.jpg",
+    "href": "gallery-5!"
+  }
+]

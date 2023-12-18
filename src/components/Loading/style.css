@@ -1,0 +1,11 @@
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: var(--Nunito);
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--transparent-black);
+  background-color: var(--additional-white);
+  text-align: center;
+}

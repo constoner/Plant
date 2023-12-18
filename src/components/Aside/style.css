@@ -17,6 +17,10 @@
   line-height: 160%;
 }
 
+.aside__gallery-wrapper {
+  height: 241px;
+}
+
 .aside__gallery {
   margin: 0 auto;
 }
@@ -25,6 +29,7 @@
   position: relative;
   display: grid;
   grid-template-columns: repeat(5, 230px);
+  height: 241px;
   padding: 0;
   list-style-type: none;
 }
