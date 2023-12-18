@@ -20,8 +20,8 @@ const Reviews = () => {
         <div className="reviews__image">
           <ImgNextGen
             className="reviews__picture"
-            srcJpgX2="./images/decoration/human@2x.jpg"
-            fallback="./images/decoration/human.jpg"
+            srcJpgX2="/images/decoration/human@2x.jpg"
+            fallback="/images/decoration/human.jpg"
             alt="A woman planting succulents."
             width="602"
             height="430"

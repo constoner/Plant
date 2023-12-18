@@ -16,8 +16,8 @@ const Aside = () => {
           <div className="gallery__wrapper">
             <a className="gallery__link" href="#!">
               <ImgNextGen
-                srcJpgX2="./images/insta/insta-1@2x.jpg"
-                fallback="./images/insta/insta-1.jpg"
+                srcJpgX2="/images/insta/insta-1@2x.jpg"
+                fallback="/images/insta/insta-1.jpg"
                 alt="A beautiful small house plant."
               />
             </a>
@@ -27,8 +27,8 @@ const Aside = () => {
           <div className="gallery__wrapper">
             <a className="gallery__link" href="#!">
               <ImgNextGen
-                srcJpgX2="./images/insta/insta-2@2x.jpg"
-                fallback="./images/insta/insta-2.jpg"
+                srcJpgX2="/images/insta/insta-2@2x.jpg"
+                fallback="/images/insta/insta-2.jpg"
                 alt="A beautiful small house plant."
               />
             </a>
@@ -38,8 +38,8 @@ const Aside = () => {
           <div className="gallery__wrapper">
             <a className="gallery__link" href="#!">
               <ImgNextGen
-                srcJpgX2="./images/insta/insta-3@2x.jpg"
-                fallback="./images/insta/insta-3.jpg"
+                srcJpgX2="/images/insta/insta-3@2x.jpg"
+                fallback="/images/insta/insta-3.jpg"
                 alt="A beautiful small house plant."
               />
             </a>
@@ -49,8 +49,8 @@ const Aside = () => {
           <div className="gallery__wrapper">
             <a className="gallery__link" href="#!">
               <ImgNextGen
-                srcJpgX2="./images/insta/insta-4@2x.jpg"
-                fallback="./images/insta/insta-4.jpg"
+                srcJpgX2="/images/insta/insta-4@2x.jpg"
+                fallback="/images/insta/insta-4.jpg"
                 alt="A beautiful small house plant."
               />
             </a>
@@ -60,8 +60,8 @@ const Aside = () => {
           <div className="gallery__wrapper">
             <a className="gallery__link" href="#!">
               <ImgNextGen
-                srcJpgX2="./images/insta/insta-5@2x.jpg"
-                fallback="./images/insta/insta-5.jpg"
+                srcJpgX2="/images/insta/insta-5@2x.jpg"
+                fallback="/images/insta/insta-5.jpg"
                 alt="A beautiful small house plant."
               />
             </a>

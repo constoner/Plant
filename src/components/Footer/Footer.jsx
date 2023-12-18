@@ -19,7 +19,7 @@ const Footer = () => {
               <li className="social__item">
                 <a className="social__link" href="#!" aria-label="Facebook.">
                   <Icon
-                    sprite="./images/vector/logos.svg"
+                    sprite="/images/vector/logos.svg"
                     name="fb"
                     width="12"
                     height="22"
@@ -29,7 +29,7 @@ const Footer = () => {
               <li className="social__item">
                 <a className="social__link" href="#!" aria-label="Twitter.">
                   <Icon
-                    sprite="./images/vector/logos.svg"
+                    sprite="/images/vector/logos.svg"
                     name="tw"
                     width="22"
                     height="18"
@@ -39,7 +39,7 @@ const Footer = () => {
               <li className="social__item">
                 <a className="social__link" href="#!" aria-label="Instagram.">
                   <Icon
-                    sprite="./images/vector/logos.svg"
+                    sprite="/images/vector/logos.svg"
                     name="inst"
                     width="20"
                     height="20"

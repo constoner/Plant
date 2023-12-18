@@ -12,10 +12,10 @@ const Logo = ({ className }) => {
       aria-label="Plant's logo - click to home page."
     >
       <Icon
-        sprite="./images/vector/logos.svg"
+        sprite="/images/vector/logos.svg"
         name="logo"
-        width={60}
-        height={29}
+        width={59}
+        height={19}
       />
     </a>
   );

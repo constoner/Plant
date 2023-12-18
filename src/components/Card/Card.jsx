@@ -13,7 +13,12 @@ const Card = ({ name, href, imgSource, rank, price }) => {
   return (
     <div className="card">
       <div className="card__image">
-        <img src={imgSource} width={180} height={153} alt="." />
+        <img
+          src={process.env.PUBLIC_URL + imgSource}
+          width={180}
+          height={153}
+          alt="."
+        />
       </div>
       <a className="card__title title" href={href}>
         {name}
@@ -22,7 +27,7 @@ const Card = ({ name, href, imgSource, rank, price }) => {
         {rankArray.map((item, index) => {
           return (
             <Icon
-              sprite="./images/vector/icons.svg"
+              sprite="/images/vector/icons.svg"
               name="star"
               width={16}
               height={16}

@@ -42,7 +42,7 @@
   font-family: "Nunito";
 
   font-display: swap;
-  src: url("./../../fonts/Nunito-Bold.woff2") format("woff2"), url("./../../fonts/Nunito-Bold.woff") format("woff");
+  src: url("./../fonts/Nunito-Bold.woff2") format("woff2"), url("./../fonts/Nunito-Bold.woff") format("woff");
 }
 
 :root {

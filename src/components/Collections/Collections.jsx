@@ -14,7 +14,7 @@ const Collections = () => {
         <a className="collections__link" href="#!">
           See all collection
           <Icon
-            sprite="./images/vector/icons.svg"
+            sprite="/images/vector/icons.svg"
             name="arrow"
             width={16}
             height={11}
@@ -26,8 +26,8 @@ const Collections = () => {
         <div className="colection__image-wrapper">
           <ImgNextGen
             className="collections__image"
-            srcJpgX2="./images/decoration/promo-small-1@2x.png"
-            fallback="./images/decoration/promo-small-1.png"
+            srcJpgX2="/images/decoration/promo-small-1@2x.png"
+            fallback="/images/decoration/promo-small-1.png"
             aria-hidden={true}
             width="180"
             height="180"
@@ -37,8 +37,8 @@ const Collections = () => {
         <div className="colection__image-wrapper">
           <ImgNextGen
             className="collections__image"
-            srcJpgX2="./images/decoration/promo-small-2@2x.png"
-            fallback="./images/decoration/promo-small-2.png"
+            srcJpgX2="/images/decoration/promo-small-2@2x.png"
+            fallback="/images/decoration/promo-small-2.png"
             aria-hidden={true}
             width="180"
             height="180"
@@ -48,8 +48,8 @@ const Collections = () => {
         <div className="colection__image-wrapper">
           <ImgNextGen
             className="collections__image"
-            srcJpgX2="./images/decoration/promo-small-3@2x.png"
-            fallback="./images/decoration/promo-small-3.png"
+            srcJpgX2="/images/decoration/promo-small-3@2x.png"
+            fallback="/images/decoration/promo-small-3.png"
             aria-hidden={true}
             width="180"
             height="180"

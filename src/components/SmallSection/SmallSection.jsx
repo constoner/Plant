@@ -10,8 +10,8 @@ const SmallSection = ({ children }) => {
       <div className="small-section__image-wrapper">
         <ImgNextGen
           className="small-section__image"
-          srcJpgX2="./images/decoration/palm@2x.png"
-          fallback="./images/decoration/palm.png"
+          srcJpgX2="/images/decoration/palm@2x.png"
+          fallback="/images/decoration/palm.png"
           alt="Palm in small pot."
           width="262"
           height="356"

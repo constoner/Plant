@@ -34,7 +34,7 @@ const Hero = () => {
         </dl>
         <img
           className="hero__decoration"
-          src="./images/decoration/leaf.png"
+          src={process.env.PUBLIC_URL + "/images/decoration/leaf.png"}
           width="157"
           height="193"
           alt="."
@@ -45,8 +45,8 @@ const Hero = () => {
       <div className="hero__image-container">
         <div className="hero__image-wrapper">
           <ImgNextGen
-            srcJpgX2="./images/decoration/hero@2x.png"
-            fallback="./images/decoration/hero.png"
+            srcJpgX2="/images/decoration/hero@2x.png"
+            fallback="/images/decoration/hero.png"
             alt="Pretty succulent plant macro photo."
             width="557"
             height="719"

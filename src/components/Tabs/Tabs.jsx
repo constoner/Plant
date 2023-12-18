@@ -39,7 +39,7 @@ const Tabs = ({ className }) => {
             <Card
               name="Outdoor Plant"
               href="#!"
-              imgSource="./images/catalog/catalog-1.png"
+              imgSource="/images/catalog/catalog-1.png"
               rank={5}
               price="50.00"
             />
@@ -48,7 +48,7 @@ const Tabs = ({ className }) => {
             <Card
               name="Monstera Plant"
               href="#!"
-              imgSource="./images/catalog/catalog-2.png"
+              imgSource="/images/catalog/catalog-2.png"
               rank={4}
               price="60.00"
             />
@@ -57,7 +57,7 @@ const Tabs = ({ className }) => {
             <Card
               name="Pottel Plant"
               href="#!"
-              imgSource="./images/catalog/catalog-3.png"
+              imgSource="/images/catalog/catalog-3.png"
               rank={5}
               price="55.00"
             />
@@ -66,7 +66,7 @@ const Tabs = ({ className }) => {
             <Card
               name="Indoor Plant"
               href="#!"
-              imgSource="./images/catalog/catalog-4.png"
+              imgSource="/images/catalog/catalog-4.png"
               rank={5}
               price="25.00"
             />

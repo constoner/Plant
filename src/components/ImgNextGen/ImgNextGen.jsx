@@ -23,8 +23,10 @@ const ImgNextGen = ({
       ) : null}
       <img
         className={className}
-        src={fallback}
-        srcSet={`${fallback}, ${srcJpgX2} 2x`}
+        src={process.env.PUBLIC_URL + fallback}
+        srcSet={`${process.env.PUBLIC_URL + fallback}, ${
+          process.env.PUBLIC_URL + srcJpgX2
+        } 2x`}
         alt={alt}
         {...props}
       />
