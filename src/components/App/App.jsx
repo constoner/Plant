@@ -20,12 +20,12 @@ const App = () => {
       <main>
         <div className="container">
           <Hero />
-          <Collections id="collections" />
-          <About id="about" />
-          <Catalog id="catalog" />
-          <Reviews id="reviews" />
+          <Collections />
+          <About />
+          <Catalog />
+          <Reviews />
           <SmallSection>
-            <Subscribe id="subscribe" />
+            <Subscribe />
           </SmallSection>
           <Aside />
         </div>

@@ -27,8 +27,8 @@ const Header = () => {
               </a>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="#blog">
-                Blog
+              <a className="menu__link" href="#catalog">
+                Product
               </a>
             </li>
             <li className="menu__item">

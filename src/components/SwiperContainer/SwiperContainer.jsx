@@ -1,49 +1,15 @@
-import React, { useState, useEffect } from "react";
+import React, { useContext, useEffect } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "./style.css";
+import PageData from "../App/Context.jsx";
 
 import ReviewCard from "../ReviewCard/ReviewCard";
 import Icon from "../Icon/Icon";
 import Loading from "../Loading/Loading";
 
-const SwiperContainer = ({ className }) => {
-  const [reviewsData, setReviewsData] = useState([]);
-
-  const getData = () => {
-    fetch(process.env.PUBLIC_URL + "/data/reviews.json", {
-      headers: {
-        "Content-Type": "application/json",
-        Accept: "application/json",
-      },
-    })
-      .then((response) => {
-        if (response.status >= 200 && response.status < 300) {
-          return response;
-        } else {
-          let error = new Error(
-            "Server is not responding. Please, reload the page"
-          );
-          error.response = response;
-          throw error;
-        }
-      })
-      .then((response) => {
-        return response.json();
-      })
-      .then((data) => setReviewsData(data))
-      .catch((e) =>
-        console.warn(
-          "Data is corrupted. Please, reload the page" + ", " + e.message
-        )
-      );
-  };
-
-  useEffect(() => {
-    getData();
-  }, []);
-
+const SwiperContainer = ({ className, data }) => {
   return (
     <Swiper
       className={className}
@@ -56,8 +22,8 @@ const SwiperContainer = ({ className }) => {
         nextEl: ".next",
       }}
     >
-      {reviewsData.length ? (
-        reviewsData.map((item, index) => {
+      {data.length ? (
+        data.map((item, index) => {
           return (
             <SwiperSlide tag="li" key={index}>
               <ReviewCard

@@ -22,7 +22,7 @@ const onSubscribe = (evt, inputRef, formRef) => {
 
 const Subscribe = () => {
   return (
-    <div className="subscribe">
+    <div className="subscribe" id="subscribe">
       <h2 className="subscribe__title title">Subscribe Our Newsletter</h2>
       <p className="subscribe__text">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, at tempor,

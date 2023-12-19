@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 64px 26px;
+  scroll-margin-top: -48px;
   --image-width: 446px;
   --image-height: 440px;
 }

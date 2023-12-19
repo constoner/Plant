@@ -23,7 +23,7 @@ const About = () => {
   };
 
   return (
-    <section className="about">
+    <section className="about" id="about">
       <div className="about__image-container">
         <ImgNextGen
           className="about__image"

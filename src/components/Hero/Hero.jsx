@@ -7,7 +7,7 @@ import Tag from "../Tag/Tag";
 
 const Hero = () => {
   return (
-    <section className="hero">
+    <section className="hero" id="info">
       <div className="hero__content">
         <h1 className="hero__title title">Growing Beautiful Plants at Home</h1>
         <p className="hero__text">

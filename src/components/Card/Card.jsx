@@ -18,6 +18,7 @@ const Card = ({ name, href, imgSource, rank, price }) => {
           width={180}
           height={153}
           alt="."
+          loading="lazy"
         />
       </div>
       <a className="card__title title" href={href}>

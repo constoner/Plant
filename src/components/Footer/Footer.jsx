@@ -59,7 +59,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#info">
+                  <a className="nav-column__link" href="#about">
                     About
                   </a>
                 </li>
@@ -69,7 +69,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#product">
+                  <a className="nav-column__link" href="#catalog">
                     Product
                   </a>
                 </li>
@@ -95,8 +95,8 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#about">
-                    About Us
+                  <a className="nav-column__link" href="#reviews">
+                    Reviews
                   </a>
                 </li>
               </ul>
@@ -121,8 +121,8 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#returns">
-                    Returns
+                  <a className="nav-column__link" href="#subscribe">
+                    Subscribe
                   </a>
                 </li>
               </ul>
