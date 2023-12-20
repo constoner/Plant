@@ -45,6 +45,8 @@ const Hero = () => {
       <div className="hero__image-container">
         <div className="hero__image-wrapper">
           <ImgNextGen
+            srcWebpX2="/images/decoration/hero@2x.webp"
+            srcWebp="/images/decoration/hero.webp"
             srcJpgX2="/images/decoration/hero@2x.png"
             fallback="/images/decoration/hero.png"
             alt="Pretty succulent plant macro photo."

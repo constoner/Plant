@@ -16,10 +16,12 @@ const ImgNextGen = ({
   return (
     <picture>
       {srcWebpX2 ? (
-        <source type="image/webp" srcSet={`${srcWebpX2} 2x`}></source>
-      ) : null}
-      {srcWebp ? (
-        <source type="image/webp" srcSet={`${srcWebp}`}></source>
+        <source
+          type="image/webp"
+          srcSet={`${process.env.PUBLIC_URL + srcWebpX2} 2x, ${
+            process.env.PUBLIC_URL + srcWebp
+          }`}
+        ></source>
       ) : null}
       <img
         className={className}
