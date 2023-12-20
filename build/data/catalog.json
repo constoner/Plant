@@ -30,5 +30,13 @@
     "rank": 5,
     "price": "25.00",
     "tags": ["new", "arrival"]
+  },
+  {
+    "name": "Ugly Plant",
+    "href": "#!",
+    "image": "/images/catalog/catalog-5.png",
+    "rank": 2,
+    "price": "200.00",
+    "tags": ["new", "arrival", "sale"]
   }
 ]
