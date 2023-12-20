@@ -6,7 +6,8 @@ import Loading from "../Loading/Loading";
 import ImgNextGen from "../ImgNextGen/ImgNextGen";
 
 const Gallery = () => {
-  const { galleryLoading, galleryData, loadGallery } = useContext(PageData);
+  const { galleryState } = useContext(PageData);
+  const { loadGallery, galleryLoading, galleryData } = galleryState();
 
   useEffect(() => {
     loadGallery();

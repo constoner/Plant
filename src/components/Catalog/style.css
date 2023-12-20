@@ -5,7 +5,7 @@
 
 .catalog__title {
   margin: 0;
-  margin-bottom: 24px;
+  margin-bottom: 12px;
   font-size: 40px;
   font-weight: 700;
   line-height: 125%;
@@ -14,5 +14,4 @@
 
 .catalog__button {
   display: block;
-  margin: 0 auto;
 }

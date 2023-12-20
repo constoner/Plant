@@ -1,34 +1,97 @@
 import { useState } from "react";
-import { getData } from "../../utils/loadData";
+import { getData, filterData } from "../../utils/utils";
+import { RESOURCES } from "../../utils/RESOURCES";
 
 const usePageState = () => {
   const [catalogData, setCatalogData] = useState([]);
-  const [catalogLoading, setCatalogLoading] = useState([]);
+  const [catalogLoading, setCatalogLoading] = useState(true);
+  const [filter, setFilter] = useState("new");
+  const [viewState, setViewState] = useState(false);
 
-  const loadCatalog = () =>
-    getData("/data/catalog.json", setCatalogLoading, setCatalogData);
+  const loadCatalog = () => {
+    getData(RESOURCES.catalog)
+      .then((data) => filterData(data, filter))
+      .then((data) => {
+        setCatalogData(data);
+        setCatalogLoading(false);
+      })
+      .catch((e) => {
+        setCatalogLoading(false);
+        console.warn(
+          "Data is corrupted. Please, reload the page" + ", " + e.message
+        );
+      });
+  };
+
+  const catalogState = () => {
+    return {
+      catalogData,
+      setCatalogData,
+      catalogLoading,
+      setCatalogLoading,
+      filter,
+      setFilter,
+      loadCatalog,
+      viewState,
+      setViewState,
+    };
+  };
 
   const [reviewsData, setReviewsData] = useState([]);
-  const [reviewsLoading, setReviewsLoading] = useState([]);
+  const [reviewsLoading, setReviewsLoading] = useState(true);
 
   const loadReviews = () =>
-    getData("/data/reviews.json", setReviewsLoading, setReviewsData);
+    getData(RESOURCES.reviews, setReviewsLoading, setReviewsData)
+      .then((data) => {
+        setReviewsData(data);
+        setReviewsLoading(false);
+      })
+      .catch((e) => {
+        setReviewsLoading(false);
+        console.warn(
+          "Data is corrupted. Please, reload the page" + ", " + e.message
+        );
+      });
+
+  const reviewsState = () => {
+    return {
+      reviewsData,
+      setReviewsData,
+      reviewsLoading,
+      setReviewsLoading,
+      loadReviews,
+    };
+  };
 
   const [galleryData, setGalleryData] = useState([]);
-  const [galleryLoading, setGalleryLoading] = useState([]);
+  const [galleryLoading, setGalleryLoading] = useState(true);
   const loadGallery = () =>
-    getData("/data/gallery.json", setGalleryLoading, setGalleryData);
+    getData(RESOURCES.gallery, setGalleryLoading, setGalleryData)
+      .then((data) => {
+        setGalleryData(data);
+        setGalleryLoading(false);
+      })
+      .catch((e) => {
+        setGalleryLoading(false);
+        console.warn(
+          "Data is corrupted. Please, reload the page" + ", " + e.message
+        );
+      });
+
+  const galleryState = () => {
+    return {
+      galleryData,
+      setGalleryData,
+      galleryLoading,
+      setGalleryLoading,
+      loadGallery,
+    };
+  };
 
   return {
-    catalogLoading,
-    catalogData,
-    loadCatalog,
-    reviewsLoading,
-    reviewsData,
-    loadReviews,
-    galleryLoading,
-    galleryData,
-    loadGallery,
+    catalogState,
+    reviewsState,
+    galleryState,
   };
 };
 

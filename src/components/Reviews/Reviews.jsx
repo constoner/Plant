@@ -7,7 +7,8 @@ import ImgNextGen from "../ImgNextGen/ImgNextGen";
 import SwiperContainer from "../SwiperContainer/SwiperContainer";
 
 const Reviews = () => {
-  const { reviewsLoading, reviewsData, loadReviews } = useContext(PageData);
+  const { reviewsState } = useContext(PageData);
+  const { loadReviews, reviewsLoading, reviewsData } = reviewsState();
 
   useEffect(() => {
     loadReviews();

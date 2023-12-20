@@ -1,6 +1,5 @@
-const getData = (url, loadingCb, cb) => {
-  loadingCb(true);
-  fetch(process.env.PUBLIC_URL + url, {
+const getData = (url) => {
+  return fetch(process.env.PUBLIC_URL + url, {
     headers: {
       "Content-Type": "application/json",
       Accep: "application/json"
@@ -14,22 +13,24 @@ const getData = (url, loadingCb, cb) => {
           "Server is not responding. Please, reload the page"
         );
         error.response = response;
-        loadingCb(false);
         throw error;
       }
     }).then((response) => {
       return response.json();
-    }).then((data) => {
-      cb(data);
-      loadingCb(false)
-    })
-    .catch((e) => {
-      loadingCb(false);
-      console.warn(
-        "Data is corrupted. Please, reload the page" + ", " + e.message
-      );
-    }
-    );
-}
+    });
+};
 
-export { getData };
+const filterData = (dataArray, filter) => {
+
+  let restData = null;
+  const partialData = dataArray.filter((item) => {
+    return item.tags.includes(filter);
+  });
+  if (partialData.length > 4) {
+    restData = partialData.splice(4, partialData.length - 4);
+  }
+  return { partialData, restData };
+
+};
+
+export { getData, filterData };

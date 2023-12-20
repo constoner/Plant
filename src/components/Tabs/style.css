@@ -2,12 +2,12 @@
   display: flex;
   justify-content: center;
   margin-bottom: 48px;
-  margin-right: -24px;
 }
 
 .tabs__button {
   display: block;
-  margin-right: 24px;
+  margin: 0;
+  padding: 10px 12px;
   font-family: var(--DMSans);
   font-size: 16px;
   font-weight: 500;
@@ -15,12 +15,12 @@
   color: var(--secondary-black);
   background-color: var(--main-white);
   border: none;
-  will-change: color;
-  transition: color 0.2s ease-out;
+  will-change: color, opacity;
+  transition: color 0.2s ease-out, opacity 0.2s ease-out;
   cursor: pointer;
 }
 
-.tabs__button[data-active] {
+.tabs__button[data-active="true"] {
   color: var(--middle-green-2);
 }
 
@@ -49,4 +49,9 @@
 
 .tabs__item:nth-child(4n+4) {
     background-color: var(--card-4);
+}
+
+.tabs__view-button {
+  display: block;
+  margin: 0 auto;
 }

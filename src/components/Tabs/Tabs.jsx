@@ -1,4 +1,4 @@
-import React, { useContext, useEffect } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./style.css";
 import PageData from "../App/Context.jsx";
 
@@ -7,18 +7,37 @@ import Card from "../Card/Card";
 import Loading from "../Loading/Loading";
 
 const Tabs = ({ className }) => {
-  const { catalogData, loadCatalog } = useContext(PageData);
+  let prevTab = document.querySelector("[data-active='true']");
+  const tabsClass = className ? `${className} tabs` : "tabs";
+  const [buttonValue, setButtonValue] = useState("View All");
+  const { catalogState } = useContext(PageData);
+  const {
+    loadCatalog,
+    catalogData,
+    filter,
+    setFilter,
+    viewState,
+    setViewState,
+  } = catalogState();
 
   useEffect(() => {
     loadCatalog();
-  }, []);
+  }, [filter]);
 
   const onTabClick = (evt) => {
-    document.querySelector("[data-active]").removeAttribute("data-active");
-    evt.target.setAttribute("data-active", true);
+    let currentTab = evt.target;
+    prevTab.dataset.active = false;
+    currentTab.dataset.active = true;
+    prevTab = currentTab;
+    setFilter(currentTab.dataset.type);
+    setViewState(false);
+    setButtonValue("View All");
   };
 
-  const tabsClass = className ? `${className} tabs` : "tabs";
+  const viewAll = () => {
+    setViewState(!viewState);
+    setButtonValue(!viewState ? "Collapse" : "View All");
+  };
 
   return (
     <div className={tabsClass}>
@@ -27,7 +46,7 @@ const Tabs = ({ className }) => {
           <button
             className="tabs__button"
             type="button"
-            data-active
+            data-active="true"
             data-type="new"
           >
             New Plants
@@ -40,8 +59,8 @@ const Tabs = ({ className }) => {
           </button>
         </div>
         <ul className="tabs__content">
-          {catalogData.length ? (
-            catalogData.map((item, index) => {
+          {catalogData.partialData?.length ? (
+            catalogData.partialData.map((item, index) => {
               return (
                 <li className="tabs__item" key={index}>
                   <Card
@@ -70,15 +89,31 @@ const Tabs = ({ className }) => {
               </li>
             </>
           )}
+          {viewState
+            ? catalogData.restData?.map((item, index) => {
+                return (
+                  <li className="tabs__item" key={index}>
+                    <Card
+                      name={item.name}
+                      href={item.href}
+                      imgSource={item.image}
+                      rank={item.rank}
+                      price={item.price}
+                    />
+                  </li>
+                );
+              })
+            : null}
         </ul>
       </div>
       <Button
-        className="catalog__button"
+        className="tabs__view-button"
         variant="button"
         type="button"
-        onClick={() => console.log(catalogData)}
+        onClick={viewAll}
+        disabled={catalogData.restData ? false : true}
       >
-        View All
+        {buttonValue}
       </Button>
     </div>
   );
