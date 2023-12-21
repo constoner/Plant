@@ -35,19 +35,15 @@
 }
 
 
-.tabs__item:nth-child(4n+1) {
+.tabs__item:nth-child(3n+1) {
     background-color: var(--card-1);
 }
 
-.tabs__item:nth-child(4n+2) {
+.tabs__item:nth-child(3n+2) {
     background-color: var(--card-2);
 }
 
-.tabs__item:nth-child(4n+3) {
-    background-color: var(--card-3);
-}
-
-.tabs__item:nth-child(4n+4) {
+.tabs__item:nth-child(3n+3) {
     background-color: var(--card-4);
 }
 
