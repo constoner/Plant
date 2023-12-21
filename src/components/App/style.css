@@ -25,6 +25,10 @@ body {
   background-color: var(--main-white);
 }
 
+button {
+  user-select: none;
+}
+
 button, a {
   text-decoration: none;
   color: inherit;
