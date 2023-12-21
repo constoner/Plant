@@ -12,7 +12,7 @@ const Header = () => {
           <Logo className="header__logo" />
           <ul className="header__menu menu">
             <li className="menu__item">
-              <a className="menu__link menu__link--active" href="#home">
+              <a className="menu__link menu__link" href="#home">
                 Home
               </a>
             </li>
