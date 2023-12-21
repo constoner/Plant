@@ -42,10 +42,7 @@ const About = () => {
         <p className="about__text">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, tempor,
           accumsan sit amet nunc cursus. Nec tristique at in erat lectus mas sa
-          diam. Lectus elit, nulla elementum fringilla at. Lorem ipsum dolor sit
-          amet, consectetur adipiscing elit. Eu, tempor, accumsan sit amet nunc
-          cursus. Nec tristique at in erat lectus mas sa diam. Lectus elit,
-          nulla elementum fringilla at.
+          diam. Lectus elit, nulla elementum fringilla at.
         </p>
         <div className="about__accordion accordion" data-accordion="parent">
           <p>
