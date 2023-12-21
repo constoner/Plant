@@ -51,7 +51,7 @@ const Footer = () => {
 
           <nav className="footer__nav">
             <div className="footer__column nav-column">
-              <p className="nav-column__title">Navigation</p>
+              <p className="nav-column__title title">Navigation</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
                   <a className="nav-column__link" href="./">
@@ -77,7 +77,7 @@ const Footer = () => {
             </div>
 
             <div className="footer__column nav-column">
-              <p className="nav-column__title">About Us</p>
+              <p className="nav-column__title title">About Us</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
                   <a className="nav-column__link" href="#contact">
@@ -103,7 +103,7 @@ const Footer = () => {
             </div>
 
             <div className="footer__column nav-column">
-              <p className="nav-column__title">Help</p>
+              <p className="nav-column__title title">Help</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
                   <a className="nav-column__link" href="#services">
