@@ -3,15 +3,15 @@
     "name": "Outdoor Plant",
     "href": "#!",
     "image": "/images/catalog/catalog-1.png",
-    "rank": 5,
+    "rank": 4,
     "price": "60.00",
-    "tags": ["new", "arrival"]
+    "tags": ["new", "arrival", "sale"]
   },
   {
     "name": "Monstera Plant",
     "href": "#!",
     "image": "/images/catalog/catalog-2.png",
-    "rank": 4,
+    "rank": 3,
     "price": "40.00",
     "tags": ["new", "sale"]
   },
@@ -19,7 +19,7 @@
     "name": "Pottel Plant",
     "href": "#!",
     "image": "/images/catalog/catalog-3.png",
-    "rank": 5,
+    "rank": 4,
     "price": "55.00",
     "tags": ["new", "sale"]
   },
@@ -32,11 +32,11 @@
     "tags": ["new", "arrival"]
   },
   {
-    "name": "Ugly Plant",
+    "name": "Magic Plant",
     "href": "#!",
     "image": "/images/catalog/catalog-5.png",
-    "rank": 2,
+    "rank": 5,
     "price": "200.00",
-    "tags": ["new", "arrival", "sale"]
+    "tags": ["new", "arrival"]
   }
 ]

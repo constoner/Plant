@@ -33,4 +33,18 @@ const filterData = (dataArray, filter) => {
 
 };
 
-export { getData, filterData };
+const debounce = (cb, timing) => {
+  return function (...args) {
+    let previousCall = this.lastCall
+    this.lastCall = Date.now()
+
+    if (previousCall && this.lastCall - previousCall <= timing) {
+      clearTimeout(this.lastCallTimer)
+    }
+
+    this.lastCallTimer = setTimeout(() => cb(...args), timing)
+
+  }
+}
+
+export { getData, filterData, debounce };

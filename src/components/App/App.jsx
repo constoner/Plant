@@ -12,6 +12,7 @@ import Aside from "../Aside/Aside";
 import Footer from "../Footer/Footer";
 import SmallSection from "../SmallSection/SmallSection";
 import Subscribe from "../Subscribe/Subscribe";
+import ToTop from "../ToTop/ToTop";
 
 const App = () => {
   return (
@@ -31,6 +32,7 @@ const App = () => {
         </div>
       </main>
       <Footer />
+      <ToTop />
     </>
   );
 };
