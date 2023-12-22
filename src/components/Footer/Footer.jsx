@@ -15,7 +15,7 @@ const Footer = () => {
               © 2023 Plant. All rights reserved.{" "}
               <a href="#!">Terms & Conditions</a>
             </p>
-            <p className="footer__text">
+            <div className="footer__text">
               <address>
                 1 Miskatonic Ln, North Providence, Rhode Island, 02911,
               </address>
@@ -23,7 +23,7 @@ const Footer = () => {
               <a href="tel:4138201890">(413) 820-1890 </a>
               <br />
               Registery Company Nomber: 19161936
-            </p>
+            </div>
             <ul className="footer__social-list social">
               <li className="social__item">
                 <a className="social__link" href="#!" aria-label="Facebook.">
@@ -73,7 +73,7 @@ const Footer = () => {
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#help">
+                  <a className="nav-column__link" href="#!">
                     Help & Support
                   </a>
                 </li>
@@ -89,17 +89,17 @@ const Footer = () => {
               <p className="nav-column__title title">About Us</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#contact">
+                  <a className="nav-column__link" href="#!">
                     Contact
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#address">
+                  <a className="nav-column__link" href="#!">
                     Address
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#blog">
+                  <a className="nav-column__link" href="#!">
                     Blog
                   </a>
                 </li>
@@ -115,17 +115,17 @@ const Footer = () => {
               <p className="nav-column__title title">Help</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#services">
+                  <a className="nav-column__link" href="#!">
                     Customer Services
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#faq">
+                  <a className="nav-column__link" href="#!">
                     FAQs
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#hiring">
+                  <a className="nav-column__link" href="#!">
                     We Are Hiring
                   </a>
                 </li>

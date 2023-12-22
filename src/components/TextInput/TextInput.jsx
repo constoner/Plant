@@ -45,7 +45,7 @@ const TextInput = ({
         variant="button"
         isSmall={true}
         type="submit"
-        onClick={(evt) => buttonCB(evt, inputRef, formRef)}
+        onClick={(evt) => buttonCB(evt, inputRef, setValue, formRef)}
       >
         {button}
       </Button>

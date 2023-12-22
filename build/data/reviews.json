@@ -3,18 +3,18 @@
     "name": "Jim Parker",
     "description": "Marketing CEO",
     "avatar": "/images/reviews/review-1.jpg",
-    "text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, tempor, accumsan sit amet nunc cursus. Nec tristique at in erat lectus mas sa diam. Lectus elit, nulla elementum fringilla at."
+    "text": "As someone with limited outdoor space, I wanted to bring some life to my balcony. I ordered several potted plants and hanging baskets from 'Plant', and I'm overjoyed with the outcome. The plants are thriving and have added so much beauty and tranquility to my small space. The variety and health of the plants exceeded my expectations, and the delivery was swift and hassle-free. It's been a delightful experience, and I'm already planning my next purchase. A big thumbs up to 'Plant' for making urban gardening so accessible and enjoyable!"
+  },
+  {
+    "name": "Constantin Kalinin",
+    "description": "Average Frontend Enjoyer",
+    "avatar": "/images/reviews/review-3.jpg",
+    "text": "I recently purchased a variety of indoor plants from 'Plant', and I couldn't be happier! Each plant arrived in impeccable condition, full of life and vibrancy. The care instructions included were a great touch, making it easy for a newbie plant parent like me. My living room has transformed into a lush, green haven, and I've noticed a positive change in my mood and the air quality. Exceptional service and top-quality plants. Highly recommended for anyone looking to add some greenery to their home!"
   },
   {
     "name": "Jane Doe",
     "description": "Creative producer",
     "avatar": "/images/reviews/review-2.jpg",
     "text": "Converge are awesome!"
-  },
-  {
-    "name": "Constantin Kalinin",
-    "description": "Average Frontend Enjoyer",
-    "avatar": "/images/reviews/review-3.jpg",
-    "text": "Hello World! I'm learning React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React React"
   }
 ]

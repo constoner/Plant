@@ -1,5 +1,6 @@
 .subscribe {
   width: 100%;
+  scroll-margin-top: 116px;
 }
 
 .subscribe__title {

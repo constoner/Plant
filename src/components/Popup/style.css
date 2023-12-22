@@ -1,0 +1,22 @@
+.popup {
+  position: fixed;
+  z-index: 10;
+  top: 100px;
+  right: 44px;
+  width: auto;
+  max-width: 500px;
+  padding: 24px;
+  font-size: 18px;
+  text-align: right;
+  background-color: var(--ghost-green-1);
+  border-radius: 4px;
+  transform-origin: -100%;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease-in-out, visibility ease-in-out 0.3s;
+  box-shadow: 0 12px 150px 0 var(--transparent-black);
+}
+
+.popup--is-bad {
+  background-color: var(--accent-yellow);
+}

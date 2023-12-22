@@ -88,10 +88,20 @@ const usePageState = () => {
     };
   };
 
+  const [popup, setPopup] = useState({
+    isBad: false,
+    value: "",
+    ivVisible: true,
+  });
+  const popupState = () => {
+    return { popup, setPopup };
+  };
+
   return {
     catalogState,
     reviewsState,
     galleryState,
+    popupState,
   };
 };
 

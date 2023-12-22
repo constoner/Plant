@@ -12,12 +12,12 @@ const Header = () => {
           <Logo className="header__logo" />
           <ul className="header__menu menu">
             <li className="menu__item">
-              <a className="menu__link menu__link" href="#home">
+              <a className="menu__link menu__link" href="./">
                 Home
               </a>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="#services">
+              <a className="menu__link" href="#!">
                 Services
               </a>
             </li>
@@ -32,7 +32,7 @@ const Header = () => {
               </a>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="#contact">
+              <a className="menu__link" href="#!">
                 Contact
               </a>
             </li>

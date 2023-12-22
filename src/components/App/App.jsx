@@ -13,6 +13,7 @@ import Footer from "../Footer/Footer";
 import SmallSection from "../SmallSection/SmallSection";
 import Subscribe from "../Subscribe/Subscribe";
 import ToTop from "../ToTop/ToTop";
+import Popup from "../Popup/Popup";
 
 const App = () => {
   return (
@@ -33,6 +34,7 @@ const App = () => {
       </main>
       <Footer />
       <ToTop />
+      <Popup />
     </>
   );
 };
