@@ -20,11 +20,12 @@ const Reviews = () => {
     <section className="reviews" id="reviews">
       <div className="reviews__wrapper">
         <div className="reviews__content">
-          <h2 className="reviews__title title">What Our Customers Says</h2>
+          <h2 className="reviews__title title">What Our Customers Say</h2>
           <p className="reviews__text">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, tempor,
-            accumsan sit amet nunc cursus. Nec tristique at in erat lectus mas
-            sa diam. Lectus elit, nulla elementum fringilla at.
+            Every feedback, like every plant, is&nbsp;unique and contributes
+            to&nbsp;the beautiful garden of&nbsp;our community. We&rsquo;re
+            committed to&nbsp;listening and continuously crafting experiences
+            that bring beauty into your life.
           </p>
           <SwiperContainer className="reviews__swiper" data={reviewsData} />
         </div>

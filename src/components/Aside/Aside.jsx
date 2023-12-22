@@ -6,10 +6,13 @@ import Gallery from "../Gallery/Gallery.jsx";
 const Aside = () => {
   return (
     <aside className="aside">
-      <h2 className="aside__title title">Follow Us on Instagram</h2>
+      <h2 className="aside__title title">Follow Us On Instagram</h2>
       <p className="aside__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, tempor,
-        accu msan sit amet nunc cursus. Nec tristique at in erat lectus
+        Dive into the colourful and fragrant world of&nbsp;Plant
+        on&nbsp;Instagram! Our dedicated section brings the beauty of&nbsp;our
+        plants and the stories behind them right to&nbsp;your fingertips.
+        Experience the joy of&nbsp;plants as&nbsp;never before and get inspired
+        with every scroll
       </p>
       <Gallery className="aside__gallery" />
     </aside>

@@ -11,16 +11,18 @@ const Hero = () => {
       <div className="hero__content">
         <h1 className="hero__title title">Growing Beautiful Plants at Home</h1>
         <p className="hero__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, tempor,
-          accumsan sit amet nunc cursus. Nec tristique at in erat lectus mas sa
-          diam. Lectus elit, nulla elementum fringilla at.
+          If&nbsp;you&rsquo;re looking for a&nbsp;special way to&nbsp;show
+          appreciation or&nbsp;to&nbsp;enhance your living space, explore the
+          flower and plant range at&nbsp;Plant for ideas. Discover an&nbsp;array
+          of&nbsp;high-quality indoor plants that are great gifts for those who
+          love gardening
         </p>
         <Button className="hero__link" variant="a" href="#!">
           Learn More
         </Button>
         <dl className="hero__achievements">
           <div className="hero__achievements-container">
-            <dt>Delivety</dt>
+            <dt>Delivery</dt>
             <dd>2000+</dd>
           </div>
           <div className="hero__achievements-container">
@@ -39,6 +41,7 @@ const Hero = () => {
           height="193"
           alt="."
           aria-hidden="true"
+          style={{ filter: "grayscale(33%)" }}
         />
       </div>
 

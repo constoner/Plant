@@ -49,7 +49,7 @@ const Tabs = ({ className }) => {
             data-active="true"
             data-type="new"
           >
-            New Plants
+            All Plants
           </button>
           <button className="tabs__button" type="button" data-type="arrival">
             New Arrivals

@@ -12,8 +12,17 @@ const Footer = () => {
           <div className="footer__social">
             <Logo className="footer__logo" />
             <p className="footer__text">
-              Lorem ipsum dolor sit amet, consectetur adi piscing elit. Diam
-              nibh posuere duis eu non sit integer at placerat amet.
+              © 2023 Plant. All rights reserved.{" "}
+              <a href="#!">Terms & Conditions</a>
+            </p>
+            <p className="footer__text">
+              <address>
+                1 Miskatonic Ln, North Providence, Rhode Island, 02911,
+              </address>
+              United States Phone Number:{" "}
+              <a href="tel:4138201890">(413) 820-1890 </a>
+              <br />
+              Registery Company Nomber: 19161936
             </p>
             <ul className="footer__social-list social">
               <li className="social__item">

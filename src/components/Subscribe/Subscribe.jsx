@@ -23,10 +23,10 @@ const onSubscribe = (evt, inputRef, formRef) => {
 const Subscribe = () => {
   return (
     <div className="subscribe" id="subscribe">
-      <h2 className="subscribe__title title">Subscribe Our Newsletter</h2>
+      <h2 className="subscribe__title title">Subscribe To Our Newsletter</h2>
       <p className="subscribe__text">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, at tempor,
-        accumsan sit amet nunc cursus.
+        Join our community of&nbsp;flower enthusiasts by&nbsp;subscribing
+        to&nbsp;Plant&rsquo;s exclusive newsletter
       </p>
       <TextInput
         className="subscribe__input"

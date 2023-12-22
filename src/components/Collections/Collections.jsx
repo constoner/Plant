@@ -9,7 +9,8 @@ const Collections = () => {
     <aside className="collections">
       <div className="collections__content">
         <h2 className="collections__title title">
-          We have lots of plants collection for you and your family
+          We&nbsp;have an&nbsp;extensive collection of&nbsp;plants for you and
+          your family
         </h2>
         <a className="collections__link" href="#!">
           See all collection

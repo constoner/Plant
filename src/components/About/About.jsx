@@ -32,22 +32,23 @@ const About = () => {
           alt="Beautiful bonsai tree in a wide pot with a bright green crown."
           width="446"
           height="440"
+          style={{ filter: "grayscale(33%)" }}
         />
       </div>
       <div className="about__content">
         <p className="about__title about__title--add title">About Us</p>
-        <h2 className="about__title title">
-          Continue to Develop to Became Global Company
-        </h2>
+        <h2 className="about__title title">Who We Are</h2>
         <p className="about__text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, tempor,
-          accumsan sit amet nunc cursus. Nec tristique at in erat lectus mas sa
-          diam. Lectus elit, nulla elementum fringilla at.
+          Plant, established in August 2012, has become the one of the huge
+          online plant platforms.
         </p>
         <div className="about__accordion accordion" data-accordion="parent">
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu, tempor,
-            accumsan sit amet nunc cursus.
+            We boast an extensive selection of over 1,000 plants to appeal to
+            garden enthusiasts from all backgrounds and please even the most
+            discerning of buyers. As an authority in horticulture, we are known
+            for growing plants used in display gardens at prestigious flower
+            shows.
           </p>
           <div
             className="accordion__element"
@@ -66,20 +67,27 @@ const About = () => {
             <div className="accordion__content" data-accordion="content">
               <div className="accordion__wrapper">
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu,
-                  tempor, accumsan sit amet nunc cursus. Nec tristique at in
-                  erat lectus mas sa diam. Lectus elit, nulla elementum
-                  fringilla at. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Eu, tempor, accumsan sit amet nunc cursus.
-                  Nec tristique at in erat lectus mas sa diam.
+                  We also collaborate with renowned garden designers to create
+                  some of the most famous gardens around the world. This
+                  co-operation allows us to continually update and expand our
+                  range of plants, ensuring that we always include the latest
+                  and most popular gardening trends.
                 </p>
                 <p>
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Eu,
-                  tempor, accumsan sit amet nunc cursus. Nec tristique at in
-                  erat lectus mas sa diam. Lectus elit, nulla elementum
-                  fringilla at. Lorem ipsum dolor sit amet, consectetur
-                  adipiscing elit. Eu, tempor, accumsan sit amet nunc cursus.
-                  Nec tristique at in erat lectus mas sa diam.
+                  Adding houseplants to your decor is a classic way to infuse
+                  your home with a fresh, inviting atmosphere. Choose from our
+                  wide variety of green plants with eye-catching shapes and
+                  foliage that add a permanent touch of nature to any room. For
+                  those who prefer flowers, we offer a range of blooming
+                  houseplants. Transform your garden with our outdoor plant
+                  collection, including everything from bulbs to climbing
+                  plants. Plant ready-to-grow trees in your outdoor spaces for
+                  structure and greenery, or make a statement with potted plants
+                  on your patio table. Look out for bee and butterfly-friendly
+                  plants and vibrant hanging arrangements for an extra touch of
+                  beauty. Our plant offerings come with various delivery options
+                  for convenience. Have orders delivered directly with free
+                  nominated-day delivery on all plants.
                 </p>
               </div>
             </div>

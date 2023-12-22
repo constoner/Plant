@@ -13,6 +13,7 @@
   width: 59px;
   height: 19px;
   display: block;
+  color: var(--main-black);
   object-fit: contain;
   transform: translate(-50%, -50%);
 }
