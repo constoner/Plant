@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from "react";
+import React, { useContext, useEffect, useState, useRef } from "react";
 import "./style.css";
 import PageData from "../App/Context.jsx";
 
@@ -9,6 +9,7 @@ import Loading from "../Loading/Loading";
 const Tabs = ({ className }) => {
   let prevTab = document.querySelector("[data-active='true']");
   const tabsClass = className ? `${className} tabs` : "tabs";
+  const tabsRef = useRef(null);
   const [buttonValue, setButtonValue] = useState("View All");
   const { catalogState } = useContext(PageData);
   const {
@@ -20,18 +21,34 @@ const Tabs = ({ className }) => {
     setViewState,
   } = catalogState();
 
+  const tabsHeight = {
+    close: "283px",
+    open: "1000px",
+  };
+
   useEffect(() => {
+    tabsRef.current.style.maxHeight = tabsHeight.close;
     loadCatalog();
   }, [filter]);
+
+  useEffect(() => {
+    tabsHeight.open = `${tabsRef.current.scrollHeight}px`;
+    tabsRef.current.style.maxHeight = viewState
+      ? tabsHeight.open
+      : tabsHeight.close;
+  }, [viewState]);
 
   const onTabClick = (evt) => {
     let currentTab = evt.target;
     prevTab.dataset.active = false;
     currentTab.dataset.active = true;
     prevTab = currentTab;
-    setFilter(currentTab.dataset.type);
+    tabsRef.current.style.maxHeight = tabsHeight.close;
     setViewState(false);
     setButtonValue("View All");
+    setTimeout(() => {
+      setFilter(currentTab.dataset.type);
+    }, 200);
   };
 
   const viewAll = () => {
@@ -58,7 +75,7 @@ const Tabs = ({ className }) => {
             Sale
           </button>
         </div>
-        <ul className="tabs__content">
+        <ul className="tabs__content" ref={tabsRef}>
           {catalogData.partialData?.length ? (
             catalogData.partialData.map((item, index) => {
               return (
@@ -89,7 +106,7 @@ const Tabs = ({ className }) => {
               </li>
             </>
           )}
-          {viewState
+          {setTimeout(viewState, 300)
             ? catalogData.restData?.map((item, index) => {
                 return (
                   <li className="tabs__item" key={index}>
