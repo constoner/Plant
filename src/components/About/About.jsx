@@ -1,24 +1,27 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
-
-import { initAccordions } from "../../vendor/accordions/init-accordion";
-import "../../vendor/accordions/data-accordion.css";
 
 import ImgNextGen from "../ImgNextGen/ImgNextGen";
 import Button from "../Button/Button";
-
-window.addEventListener("DOMContentLoaded", () => {
-  window.addEventListener("load", () => {
-    initAccordions();
-  });
-});
 
 const About = () => {
   const [value, setValue] = useState("Read More");
   const accordionRef = useRef(null);
 
+  const aboutHeight = {
+    close: "150px",
+    open: "1000px",
+  };
+
+  useEffect(() => {
+    aboutHeight.open = `${accordionRef.current.scrollHeight}px`;
+  }, [value]);
+
   const onButtonClick = (elem) => {
     elem.current.toggleAttribute("is-active");
+    elem.current.style.maxHeight = elem.current.attributes["is-active"]
+      ? aboutHeight.open
+      : aboutHeight.close;
     setValue(!elem.current.attributes["is-active"] ? "Read More" : "Read Less");
   };
 
@@ -42,7 +45,7 @@ const About = () => {
           Plant, established in August 2012, has become the one of the huge
           online plant platforms.
         </p>
-        <div className="about__accordion accordion" data-accordion="parent">
+        <div className="about__accordion" ref={accordionRef}>
           <p>
             We boast an extensive selection of over 1,000 plants to appeal to
             garden enthusiasts from all backgrounds and please even the most
@@ -50,49 +53,36 @@ const About = () => {
             for growing plants used in display gardens at prestigious flower
             shows.
           </p>
-          <div
-            className="accordion__element"
-            data-accordion="element"
-            ref={accordionRef}
-          >
-            <Button
-              className="about__button accordion__button"
-              type="button"
-              variant="button"
-              data-accordion="button"
-              onClick={() => onButtonClick(accordionRef)}
-            >
-              {value}
-            </Button>
-            <div className="accordion__content" data-accordion="content">
-              <div className="accordion__wrapper">
-                <p>
-                  We also collaborate with renowned garden designers to create
-                  some of the most famous gardens around the world. This
-                  co-operation allows us to continually update and expand our
-                  range of plants, ensuring that we always include the latest
-                  and most popular gardening trends.
-                </p>
-                <p>
-                  Adding houseplants to your decor is a classic way to infuse
-                  your home with a fresh, inviting atmosphere. Choose from our
-                  wide variety of green plants with eye-catching shapes and
-                  foliage that add a permanent touch of nature to any room. For
-                  those who prefer flowers, we offer a range of blooming
-                  houseplants. Transform your garden with our outdoor plant
-                  collection, including everything from bulbs to climbing
-                  plants. Plant ready-to-grow trees in your outdoor spaces for
-                  structure and greenery, or make a statement with potted plants
-                  on your patio table. Look out for bee and butterfly-friendly
-                  plants and vibrant hanging arrangements for an extra touch of
-                  beauty. Our plant offerings come with various delivery options
-                  for convenience. Have orders delivered directly with free
-                  nominated-day delivery on all plants.
-                </p>
-              </div>
-            </div>
-          </div>
+          <p>
+            We also collaborate with renowned garden designers to create some of
+            the most famous gardens around the world. This co-operation allows
+            us to continually update and expand our range of plants, ensuring
+            that we always include the latest and most popular gardening trends.
+          </p>
+          <p>
+            Adding houseplants to your decor is a classic way to infuse your
+            home with a fresh, inviting atmosphere. Choose from our wide variety
+            of green plants with eye-catching shapes and foliage that add a
+            permanent touch of nature to any room. For those who prefer flowers,
+            we offer a range of blooming houseplants. Transform your garden with
+            our outdoor plant collection, including everything from bulbs to
+            climbing plants. Plant ready-to-grow trees in your outdoor spaces
+            for structure and greenery, or make a statement with potted plants
+            on your patio table. Look out for bee and butterfly-friendly plants
+            and vibrant hanging arrangements for an extra touch of beauty. Our
+            plant offerings come with various delivery options for convenience.
+            Have orders delivered directly with free nominated-day delivery on
+            all plants.
+          </p>
         </div>
+        <Button
+          className="about__button"
+          type="button"
+          variant="button"
+          onClick={() => onButtonClick(accordionRef)}
+        >
+          {value}
+        </Button>
       </div>
     </section>
   );

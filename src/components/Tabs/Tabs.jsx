@@ -106,7 +106,7 @@ const Tabs = ({ className }) => {
               </li>
             </>
           )}
-          {setTimeout(viewState, 300)
+          {setTimeout(viewState, 200)
             ? catalogData.restData?.map((item, index) => {
                 return (
                   <li className="tabs__item" key={index}>

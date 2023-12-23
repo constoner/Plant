@@ -28,13 +28,14 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  /* max-height: 283px; */
+  max-height: 283px;
   margin: 0;
   margin-bottom: 40px;
   padding: 0;
   list-style-type: none;
   overflow: hidden;
-  transition: max-height 0.2s ease-in-out;
+  transition: max-height 0.2s ease-out;
+  will-change: max-height;
 }
 
 
