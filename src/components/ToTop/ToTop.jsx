@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./style.css";
 import { debounce } from "../../utils/utils";
+import { scrollProps } from "../../utils/CONSTANTS";
 
 import Icon from "../Icon/Icon";
 
@@ -12,7 +13,7 @@ const ToTop = () => {
   };
 
   const showButton = () => {
-    if (document.documentElement.scrollTop >= 350) {
+    if (document.documentElement.scrollTop >= scrollProps.scrollPosition) {
       buttonRef.current.style.visibility = "visible";
       buttonRef.current.style.opacity = 1;
     } else {
@@ -21,7 +22,7 @@ const ToTop = () => {
     }
   };
 
-  const debouncedShowButton = debounce(showButton, 50);
+  const debouncedShowButton = debounce(showButton, scrollProps.debounceDelay);
 
   useEffect(() => {
     document.addEventListener("scroll", debouncedShowButton);

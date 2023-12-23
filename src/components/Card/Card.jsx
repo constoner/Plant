@@ -1,14 +1,17 @@
 import React from "react";
 import "./style.css";
+import { catalogMaxRank } from "../../utils/CONSTANTS";
 
 import Icon from "../Icon/Icon";
 
 const Card = ({ name, href, imgSource, rank, price }) => {
-  const rankArray = Array.from({ length: 5 }).map((item, index) => {
-    return index < rank
-      ? (item = { color: "var(--accent-yellow)" })
-      : (item = { color: "var(--transparent-black)" });
-  });
+  const rankArray = Array.from({ length: catalogMaxRank }).map(
+    (item, index) => {
+      return index < rank
+        ? (item = { color: "var(--accent-yellow)" })
+        : (item = { color: "var(--transparent-black)" });
+    }
+  );
 
   return (
     <div className="card">
@@ -24,7 +27,11 @@ const Card = ({ name, href, imgSource, rank, price }) => {
       <a className="card__title title" href={href}>
         {name}
       </a>
-      <div className="card__rank" id="rank" aria-label={`rating: ${rank}/5`}>
+      <div
+        className="card__rank"
+        id="rank"
+        aria-label={`rating: ${rank / catalogMaxRank}`}
+      >
         {rankArray.map((item, index) => {
           return (
             <Icon

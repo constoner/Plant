@@ -63,6 +63,10 @@
   border-radius: 4px;
 }
 
+.social__link svg {
+  pointer-events: none;
+}
+
 .footer__nav {
   display: flex;
   flex-wrap: wrap;

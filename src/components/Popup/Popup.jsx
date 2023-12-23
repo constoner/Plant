@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import "./style.css";
 import PageData from "../App/Context.jsx";
+import { popupProps } from "../../utils/CONSTANTS.js";
 
 const Popup = () => {
   const { popupState } = useContext(PageData);
@@ -31,7 +32,7 @@ const Popup = () => {
       popupRef.current.style.opacity = 0;
       popupRef.current.style.visibility = "hidden";
       popupState().popup.isVisible = false;
-    }, 3000);
+    }, popupProps.showDelay);
   }
 
   return (

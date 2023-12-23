@@ -19,8 +19,8 @@ const Footer = () => {
               <address>
                 1 Miskatonic Ln, North Providence, Rhode Island, 02911,
               </address>
-              United States Phone Number:{" "}
-              <a href="tel:4138201890">(413) 820-1890 </a>
+              United States Phone Number:
+              <a href="tel:4138201890"> (413) 820-1890 </a>
               <br />
               Registery Company Nomber: 19161936
             </div>
