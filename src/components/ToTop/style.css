@@ -12,6 +12,7 @@
   background-color: var(--ghost-green-1);
   border: none;
   border-radius: 4px;
+  box-shadow: 0 12px 75px 5px var(--transparent-black);
   cursor: pointer;
   opacity: 0;
   visibility: hidden;
