@@ -3,11 +3,11 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation } from "swiper/modules";
 import "swiper/css";
 import "./style.css";
-import PageData from "../App/Context.jsx";
+import PageData from "../../App/Context.jsx";
 
 import ReviewCard from "../ReviewCard/ReviewCard";
-import Icon from "../Icon/Icon";
-import Loading from "../Loading/Loading";
+import Icon from "../../misc/Icon/Icon";
+import Loading from "../../misc/Loading/Loading";
 
 const SwiperContainer = ({ className, data }) => {
   return (

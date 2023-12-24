@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useRef } from "react";
 import "./style.css";
-import PageData from "../App/Context.jsx";
-import { popupProps } from "../../utils/CONSTANTS.js";
+import PageData from "../../App/Context.jsx";
+import { popupProps } from "../../../utils/CONSTANTS.js";
 
 const Popup = () => {
   const { popupState } = useContext(PageData);

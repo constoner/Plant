@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
 
-import Icon from "../Icon/Icon";
-import ImgNextGen from "../ImgNextGen/ImgNextGen";
+import Icon from "../../misc/Icon/Icon";
+import ImgNextGen from "../../misc/ImgNextGen/ImgNextGen";
 
 const Collections = () => {
   return (

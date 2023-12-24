@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
 
-import Logo from "../Logo/Logo";
-import Icon from "../Icon/Icon";
+import Logo from "../../misc/Logo/Logo";
+import Icon from "../../misc/Icon/Icon";
 
 const Footer = () => {
   return (

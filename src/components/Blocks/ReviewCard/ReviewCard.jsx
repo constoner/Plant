@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-import Icon from "../Icon/Icon";
+import Icon from "../../misc/Icon/Icon";
 
 const ReviewCard = ({ name, description, text, avatar }) => {
   return (

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import "./style.css";
-import { debounce } from "../../utils/utils";
-import { scrollProps } from "../../utils/CONSTANTS";
+import { debounce } from "../../../utils/utils";
+import { scrollProps } from "../../../utils/CONSTANTS";
 
 import Icon from "../Icon/Icon";
 

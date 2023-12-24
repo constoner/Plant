@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
-import { catalogMaxRank } from "../../utils/CONSTANTS";
+import { catalogMaxRank } from "../../../utils/CONSTANTS";
 
-import Icon from "../Icon/Icon";
+import Icon from "../../misc/Icon/Icon";
 
 const Card = ({ name, href, imgSource, rank, price }) => {
   const rankArray = Array.from({ length: catalogMaxRank }).map(

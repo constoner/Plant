@@ -1,8 +1,8 @@
 import React from "react";
 import "./style.css";
 
-import Logo from "../Logo/Logo";
-import Button from "../Button/Button";
+import Logo from "../../misc/Logo/Logo";
+import Button from "../../misc/Button/Button";
 
 const Header = () => {
   return (

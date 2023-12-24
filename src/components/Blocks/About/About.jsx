@@ -1,8 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 import "./style.css";
 
-import ImgNextGen from "../ImgNextGen/ImgNextGen";
-import Button from "../Button/Button";
+import ImgNextGen from "../../misc/ImgNextGen/ImgNextGen";
+import Button from "../../misc/Button/Button";
 
 const About = () => {
   const [value, setValue] = useState("Read More");

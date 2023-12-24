@@ -1,9 +1,9 @@
 import React, { useContext, useEffect } from "react";
 import "./style.css";
-import PageData from "../App/Context.jsx";
+import PageData from "../../App/Context";
 
-import Loading from "../Loading/Loading";
-import ImgNextGen from "../ImgNextGen/ImgNextGen";
+import Loading from "./../../misc/Loading/Loading";
+import ImgNextGen from "./../../misc/ImgNextGen/ImgNextGen";
 
 const Gallery = () => {
   const { galleryState } = useContext(PageData);

@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-import Button from "../Button/Button";
-import ImgNextGen from "../ImgNextGen/ImgNextGen";
-import Tag from "../Tag/Tag";
+import Button from "../../misc/Button/Button";
+import ImgNextGen from "../../misc/ImgNextGen/ImgNextGen";
+import Tag from "../../misc/Tag/Tag";
 
 const Hero = () => {
   return (

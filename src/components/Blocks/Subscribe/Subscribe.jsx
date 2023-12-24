@@ -1,8 +1,8 @@
 import React, { useContext } from "react";
 import "./style.css";
-import PageData from "../App/Context.jsx";
+import PageData from "../../App/Context.jsx";
 
-import TextInput from "../TextInput/TextInput";
+import TextInput from "../../misc/TextInput/TextInput";
 
 const Subscribe = () => {
   const { popupState } = useContext(PageData);

@@ -1,10 +1,10 @@
 import React, { useContext, useEffect, useState, useRef } from "react";
 import "./style.css";
-import PageData from "../App/Context.jsx";
+import PageData from "../../App/Context.jsx";
 
-import Button from "../Button/Button";
+import Button from "../../misc/Button/Button.jsx";
 import Card from "../Card/Card";
-import Loading from "../Loading/Loading";
+import Loading from "../../misc/Loading/Loading";
 
 const Tabs = ({ className }) => {
   let prevTab = document.querySelector("[data-active='true']");
