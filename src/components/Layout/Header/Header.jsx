@@ -12,28 +12,28 @@ const Header = () => {
           <Logo className="header__logo" />
           <ul className="header__menu menu">
             <li className="menu__item">
-              <a className="menu__link menu__link" href="./">
+              <a className="menu__link menu__link" href="/">
                 Home
               </a>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="#!">
-                Services
+              <a className="menu__link" href="/products">
+                Products
               </a>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="#about">
+              <a className="menu__link" href="/about-us">
                 About Us
               </a>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="#catalog">
-                Product
+              <a className="menu__link" href="/blog">
+                Blog
               </a>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="#!">
-                Contact
+              <a className="menu__link" href="/contacts">
+                Contacts
               </a>
             </li>
           </ul>

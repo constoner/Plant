@@ -17,7 +17,7 @@ const Hero = () => {
           of&nbsp;high-quality indoor plants that are great gifts for those who
           love gardening
         </p>
-        <Button className="hero__link" variant="a" href="#!">
+        <Button className="hero__link" variant="a" href="/about-us">
           Learn More
         </Button>
         <dl className="hero__achievements">

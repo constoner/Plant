@@ -12,7 +12,7 @@ const Collections = () => {
           We&nbsp;have an&nbsp;extensive collection of&nbsp;plants for you and
           your family
         </h2>
-        <a className="collections__link" href="#!">
+        <a className="collections__link" href="/products">
           See all collection
           <Icon
             sprite="/images/vector/icons.svg"

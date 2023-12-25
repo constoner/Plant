@@ -11,10 +11,7 @@ const Footer = () => {
         <div className="footer__container">
           <div className="footer__social">
             <Logo className="footer__logo" />
-            <p className="footer__text">
-              © 2023 Plant. All rights reserved.{" "}
-              <a href="#!">Terms & Conditions</a>
-            </p>
+            <p className="footer__text">© 2023 Plant. All rights reserved</p>
             <div className="footer__text">
               <address>
                 1 Miskatonic Ln, North Providence, Rhode Island, 02911,
@@ -63,49 +60,23 @@ const Footer = () => {
               <p className="nav-column__title title">Navigation</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="./">
+                  <a className="nav-column__link" href="/">
                     Home
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#about">
-                    About
+                  <a className="nav-column__link" href="/products">
+                    Products
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#!">
-                    Help & Support
+                  <a className="nav-column__link" href="/about-us">
+                    About Us
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#catalog">
-                    Product
-                  </a>
-                </li>
-              </ul>
-            </div>
-
-            <div className="footer__column nav-column">
-              <p className="nav-column__title title">About Us</p>
-              <ul className="nav-column__list">
-                <li className="nav-column__item">
-                  <a className="nav-column__link" href="#!">
-                    Contact
-                  </a>
-                </li>
-                <li className="nav-column__item">
-                  <a className="nav-column__link" href="#!">
-                    Address
-                  </a>
-                </li>
-                <li className="nav-column__item">
-                  <a className="nav-column__link" href="#!">
+                  <a className="nav-column__link" href="/blog">
                     Blog
-                  </a>
-                </li>
-                <li className="nav-column__item">
-                  <a className="nav-column__link" href="#reviews">
-                    Reviews
                   </a>
                 </li>
               </ul>
@@ -115,23 +86,23 @@ const Footer = () => {
               <p className="nav-column__title title">Help</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#!">
-                    Customer Services
+                  <a className="nav-column__link" href="Contacts">
+                    Contacts
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#!">
-                    FAQs
+                  <a className="nav-column__link" href="/questions">
+                    FAQ
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#!">
-                    We Are Hiring
+                  <a className="nav-column__link" href="/feedback">
+                    Feedback
                   </a>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="#subscribe">
-                    Subscribe
+                  <a className="nav-column__link" href="/terms">
+                    Terms & Conditions
                   </a>
                 </li>
               </ul>

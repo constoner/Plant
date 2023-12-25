@@ -1,0 +1,10 @@
+.not-found.title {
+  margin-bottom: 24px;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+p.not-found.title {
+  margin: 0;
+  font-size: 120px;
+}

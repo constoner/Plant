@@ -3,17 +3,17 @@ import "./style-colors.css";
 import "./style.css";
 
 import Header from "../Layout/Header/Header";
-import Hero from "../Blocks/Hero/Hero";
-import Collections from "../Blocks/Collections/Collections";
-import About from "../Blocks/About/About";
-import Catalog from "../Blocks/Catalog/Catalog";
-import Reviews from "../Blocks/Reviews/Reviews";
-import Aside from "../Blocks/Aside/Aside";
 import Footer from "../Layout/Footer/Footer";
-import SmallSection from "../misc/SmallSection/SmallSection";
-import Subscribe from "../Blocks/Subscribe/Subscribe";
 import ToTop from "../misc/ToTop/ToTop";
 import Popup from "../misc/Popup/Popup";
+import Home from "../Layout/Home/Home";
+import Products from "../Layout/Products/Products";
+import AboutUs from "../Layout/AboutUs/AboutUs";
+import Contacts from "../Layout/Contacts/Contact";
+import Questions from "../Layout/Questions/Questions";
+import Terms from "../Layout/Terms/Terms";
+
+import NotFound from "../Layout/NotFound/NotFound";
 
 const App = () => {
   return (
@@ -21,15 +21,13 @@ const App = () => {
       <Header />
       <main>
         <div className="container">
-          <Hero />
-          <Collections />
-          <About />
-          <Catalog />
-          <Reviews />
-          <SmallSection>
-            <Subscribe />
-          </SmallSection>
-          <Aside />
+          <Home />
+          <Products />
+          <AboutUs />
+          <Contacts />
+          <Questions />
+          <Terms />
+          <NotFound />
         </div>
       </main>
       <Footer />

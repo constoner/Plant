@@ -47,6 +47,7 @@ const Subscribe = () => {
         className="subscribe__input"
         placeholder="Enter mail..."
         button="Subscribe"
+        type="email"
         name="email"
         id="email"
         for="email"

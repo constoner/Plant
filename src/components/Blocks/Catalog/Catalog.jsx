@@ -6,7 +6,7 @@ import Tabs from "../Tabs/Tabs";
 const Catalog = () => {
   return (
     <section className="catalog" id="catalog">
-      <h2 className="catalog__title title">Our Best Products</h2>
+      <h2 className="catalog__title title">Our Products</h2>
       <Tabs className="catalog__tabs" />
     </section>
   );

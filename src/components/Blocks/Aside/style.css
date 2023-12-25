@@ -1,6 +1,7 @@
 .aside {
   text-align: center;
-  margin-bottom: 79px;
+  padding-top: 64px;
+  padding-bottom: 79px;
 }
 
 .aside__title {

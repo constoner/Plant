@@ -7,6 +7,7 @@ const TextInput = ({
   className,
   placeholder,
   button,
+  type,
   name,
   pattern,
   required,
@@ -30,7 +31,7 @@ const TextInput = ({
       </label>
       <input
         className="text-input__input"
-        type="email"
+        type={type}
         placeholder={placeholder}
         name={name}
         id={name}
