@@ -1,7 +1,3 @@
-.terms {
-
-}
-
 .terms__title {
   margin: 0;
   margin-bottom: 12px;
@@ -20,7 +16,7 @@
 
 .terms__container {
   width: 100%;
-  height: 390px;
+  height: calc(100vh - 540px);
   overflow: auto;
   scrollbar-width: thin;
 }

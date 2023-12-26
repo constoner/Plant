@@ -21,13 +21,13 @@ const App = () => {
       <Header />
       <main>
         <div className="container">
-          {/* <Home /> */}
-          {/* <Products /> */}
-          {/* <AboutUs /> */}
+          <Home />
+          <Products />
+          <AboutUs />
           <Contacts />
-          {/* <Questions /> */}
-          {/* <Terms /> */}
-          {/* <NotFound /> */}
+          <Questions />
+          <Terms />
+          <NotFound />
         </div>
       </main>
       <Footer />
