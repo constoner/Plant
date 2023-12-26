@@ -20,7 +20,7 @@ const Contacts = () => {
           />
           <Icon
             sprite="/images/vector/icons.svg"
-            name="pin"
+            name="map-pin"
             width={60}
             height={120}
             aria-hidden={true}
@@ -35,51 +35,42 @@ const Contacts = () => {
             assist you!
           </p>
           <div className="contacts__container">
-            <address className="contacts__link contacts__link--address">
+            <address className="contacts__link">
               <Icon
                 sprite="/images/vector/icons.svg"
-                name="map"
-                width={24}
-                height={24}
+                name="map-pin"
+                width={22}
+                height={22}
                 aria-hidden={true}
               />
               1 Miskatonic Ln, North Providence, Rhode Island, 02911
             </address>
-            <a
-              className="contacts__link contacts__link--phone"
-              href="tel:4138201890"
-            >
+            <a className="contacts__link" href="tel:4138201890">
               <Icon
                 sprite="/images/vector/icons.svg"
                 name="phone"
-                width={24}
-                height={24}
+                width={22}
+                height={22}
                 aria-hidden={true}
               />
               (413) 820-1890
             </a>
-            <a
-              className="contacts__link contacts__link--mobile"
-              href="tel:+14019368731"
-            >
+            <a className="contacts__link" href="tel:+14019368731">
               <Icon
                 sprite="/images/vector/icons.svg"
                 name="mobile"
-                width={24}
-                height={24}
+                width={22}
+                height={22}
                 aria-hidden={true}
               />
               +1 (401) 936-8731
             </a>
-            <a
-              className="contacts__link contacts__link--email"
-              href="mailto:info@plant.com"
-            >
+            <a className="contacts__link" href="mailto:info@plant.com">
               <Icon
                 sprite="/images/vector/icons.svg"
-                name="email"
-                width={24}
-                height={24}
+                name="mail"
+                width={22}
+                height={22}
                 aria-hidden={true}
               />
               info@plant.com
@@ -88,8 +79,8 @@ const Contacts = () => {
               <Icon
                 sprite="/images/vector/logos.svg"
                 name="fb"
-                width={24}
-                height={24}
+                width={22}
+                height={22}
                 aria-hidden={true}
               />
               @homeplantbeauty
@@ -98,8 +89,8 @@ const Contacts = () => {
               <Icon
                 sprite="/images/vector/logos.svg"
                 name="tw"
-                width={24}
-                height={24}
+                width={22}
+                height={22}
                 aria-hidden={true}
               />
               @homeplantbeauty
@@ -108,8 +99,8 @@ const Contacts = () => {
               <Icon
                 sprite="/images/vector/logos.svg"
                 name="inst"
-                width={24}
-                height={24}
+                width={22}
+                height={22}
                 aria-hidden={true}
               />
               @homeplantbeauty

@@ -12,7 +12,10 @@ const Header = () => {
           <Logo className="header__logo" />
           <ul className="header__menu menu">
             <li className="menu__item">
-              <a className="menu__link menu__link" href="/">
+              <a
+                className="menu__link menu__link"
+                href={process.env.PUBLIC_URL + "/"}
+              >
                 Home
               </a>
             </li>

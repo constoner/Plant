@@ -11,7 +11,7 @@ const Popup = () => {
   const popupRef = useRef(null);
 
   const onLinkClick = (evt) => {
-    if (evt.target.href?.includes("#!")) {
+    if (evt.target.tagName === "A" && evt.target.href.includes("#!")) {
       popupState().setPopup({
         isBad: true,
         value: "Page not found!",

@@ -60,7 +60,10 @@ const Footer = () => {
               <p className="nav-column__title title">Navigation</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="/">
+                  <a
+                    className="nav-column__link"
+                    href={process.env.PUBLIC_URL + "/"}
+                  >
                     Home
                   </a>
                 </li>
