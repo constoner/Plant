@@ -1,28 +1,26 @@
 .terms {
-  display: flex;
-  flex-direction: column;
-  width: 100%;
-  /* height: 440px; */
-  height: calc(100vh - 490px);
-  padding: 12px 0;
+
 }
 
 .terms__title {
   margin: 0;
   margin-bottom: 12px;
-  font-size: 24px;
+  font-size: 40px;
   font-weight: 700;
   text-align: center;
 }
 
-.terms__container {
-  flex-grow: 0;
-  flex-shrink: 1;
+.terms__back {
   width: 748px;
   margin: 0 auto;
   padding: 24px;
   background-color: var(--ghost-green-2);
   border-radius: 8px;
+}
+
+.terms__container {
+  width: 100%;
+  height: 390px;
   overflow: auto;
   scrollbar-width: thin;
 }
@@ -43,5 +41,7 @@
 
 .terms p {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 400;
 }

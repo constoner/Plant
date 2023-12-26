@@ -8,12 +8,12 @@
 .collections__content {
   display: flex;
   flex-direction: column;
-  width: 390px;
+  margin-right: 32px;
 }
 
 .collections__title {
   margin: 0;
-  font-size: 36px;
+  font-size: 40px;
   font-weight: 700;
   line-height: normal;
 }

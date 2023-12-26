@@ -24,7 +24,7 @@ const Contacts = () => {
             width={60}
             height={120}
             aria-hidden={true}
-            style={{ top: "142px", left: "238px" }}
+            style={{ top: "205px", left: "218px" }}
           />
         </div>
         <div className="contacts__content">

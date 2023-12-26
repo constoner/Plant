@@ -58,8 +58,8 @@
 .contacts__text {
   margin: 0;
   margin-bottom: 32px;
-  font-family: var(--Nunito);
-  font-size: 18px;
+  font-family: var(--DMSans);
+  font-size: 16px;
   font-weight: 400;
   line-height: 160%;
   color: var(--secondary-black);
@@ -77,6 +77,7 @@
   margin-bottom: 24px;
   font-family: inherit;
   font-size: 16px;
+  font-weight: 400;
   font-style: normal;
 }
 

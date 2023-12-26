@@ -19,7 +19,7 @@ const Footer = () => {
               United States Phone Number:
               <a href="tel:4138201890"> (413) 820-1890 </a>
               <br />
-              Registery Company Nomber: 19161936
+              Registery Company Number: 19161936
             </div>
             <ul className="footer__social-list social">
               <li className="social__item">

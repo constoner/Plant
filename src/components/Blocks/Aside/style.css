@@ -7,7 +7,7 @@
 .aside__title {
   margin: 0;
   margin-bottom: 12px;
-  font-size: 48px;
+  font-size: 40px;
 }
 
 .aside__text {
@@ -15,6 +15,7 @@
   margin: 0 auto;
   margin-bottom: 40px;
   font-size: 16px;
+  font-weight: 400;
   line-height: 160%;
 }
 

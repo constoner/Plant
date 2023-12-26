@@ -1,7 +1,7 @@
 .footer {
   margin-top: auto;
-  padding-top: 49px;
-  padding-bottom: 96px;
+  padding-top: 32px;
+  padding-bottom: 64px;
 }
 
 .footer__container {
@@ -28,11 +28,6 @@
 
 .footer__text address {
   font-style: normal;
-}
-
-.footer__text a {
-  /* text-decoration: underline; */
-  /* text-underline-offset: 4px; */
 }
 
 .footer__social-list {
@@ -101,6 +96,7 @@
 
 .nav-column__link {
   display: block;
+  width: fit-content;
   font-family: var(--DMSans);
   font-size: 16px;
   font-weight: 400;
