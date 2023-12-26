@@ -13,7 +13,7 @@ const Header = () => {
           <ul className="header__menu menu">
             <li className="menu__item">
               <a
-                className="menu__link menu__link"
+                className="menu__link menu__link menu__link--active"
                 href={process.env.PUBLIC_URL + "/"}
               >
                 Home
