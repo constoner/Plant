@@ -8,20 +8,17 @@ const Button = ({
   isSmall = false,
   ...props
 }) => {
+  const CustomButton = `${variant}`;
   let buttonClass = className ? `${className} button` : "button";
 
   if (isSmall) {
     buttonClass += " button--small";
   }
 
-  return variant === "a" ? (
-    <a className={buttonClass} {...props}>
+  return (
+    <CustomButton className={buttonClass} {...props}>
       {children}
-    </a>
-  ) : (
-    <button className={buttonClass} {...props}>
-      {children}
-    </button>
+    </CustomButton>
   );
 };
 

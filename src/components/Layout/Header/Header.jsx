@@ -1,6 +1,9 @@
 import React from "react";
 import "./style.css";
 
+import ROUTES from "../../../utils/ROUTES";
+import { NavLink } from "react-router-dom";
+
 import Logo from "../../misc/Logo/Logo";
 import Button from "../../misc/Button/Button";
 
@@ -12,32 +15,29 @@ const Header = () => {
           <Logo className="header__logo" />
           <ul className="header__menu menu">
             <li className="menu__item">
-              <a
-                className="menu__link menu__link menu__link--active"
-                href={process.env.PUBLIC_URL + "/"}
-              >
+              <NavLink className="menu__link menu__link" to={ROUTES.home}>
                 Home
-              </a>
+              </NavLink>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="/products">
+              <NavLink className="menu__link" to={ROUTES.products}>
                 Products
-              </a>
+              </NavLink>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="/about-us">
+              <NavLink className="menu__link" to={ROUTES.aboutUs}>
                 About Us
-              </a>
+              </NavLink>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="/blog">
+              <NavLink className="menu__link" to={ROUTES.blog}>
                 Blog
-              </a>
+              </NavLink>
             </li>
             <li className="menu__item">
-              <a className="menu__link" href="/contacts">
+              <NavLink className="menu__link" to={ROUTES.contacts}>
                 Contacts
-              </a>
+              </NavLink>
             </li>
           </ul>
           <ul className="header__user-menu user-menu">

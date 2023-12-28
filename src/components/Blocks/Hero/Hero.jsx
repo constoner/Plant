@@ -1,6 +1,9 @@
 import React from "react";
 import "./style.css";
 
+import ROUTES from "../../../utils/ROUTES";
+import { Link } from "react-router-dom";
+
 import Button from "../../misc/Button/Button";
 import ImgNextGen from "../../misc/ImgNextGen/ImgNextGen";
 import Tag from "../../misc/Tag/Tag";
@@ -17,9 +20,12 @@ const Hero = () => {
           of&nbsp;high-quality indoor plants that are great gifts for those who
           love gardening
         </p>
-        <Button className="hero__link" variant="a" href="/about-us">
-          Learn More
-        </Button>
+
+        <Link to={ROUTES.aboutUs}>
+          <Button className="hero__link" variant="span">
+            Learn More
+          </Button>
+        </Link>
         <dl className="hero__achievements">
           <div className="hero__achievements-container">
             <dt>Delivery</dt>

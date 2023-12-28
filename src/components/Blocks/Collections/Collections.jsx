@@ -1,6 +1,9 @@
 import React from "react";
 import "./style.css";
 
+import ROUTES from "../../../utils/ROUTES";
+import { Link } from "react-router-dom";
+
 import Icon from "../../misc/Icon/Icon";
 import ImgNextGen from "../../misc/ImgNextGen/ImgNextGen";
 
@@ -12,7 +15,7 @@ const Collections = () => {
           We&nbsp;have an&nbsp;extensive collection of&nbsp;plants for you and
           your family
         </h2>
-        <a className="collections__link" href="/products">
+        <Link className="collections__link" to={ROUTES.products}>
           See all collection
           <Icon
             sprite="/images/vector/icons.svg"
@@ -21,7 +24,7 @@ const Collections = () => {
             height={11}
             aria-hidden={true}
           />
-        </a>
+        </Link>
       </div>
       <div className="collections__gallery">
         <div className="colection__image-wrapper">

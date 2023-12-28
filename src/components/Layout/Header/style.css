@@ -42,7 +42,7 @@
   content: "";
 }
 
-.menu__link--active::before {
+.menu__link[aria-current]::before {
   opacity: 1;
 }
 

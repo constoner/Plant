@@ -1,6 +1,9 @@
 import React from "react";
 import "./style.css";
 
+import ROUTES from "../../../utils/ROUTES";
+import { Link } from "react-router-dom";
+
 import Logo from "../../misc/Logo/Logo";
 import Icon from "../../misc/Icon/Icon";
 
@@ -60,27 +63,24 @@ const Footer = () => {
               <p className="nav-column__title title">Navigation</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
-                  <a
-                    className="nav-column__link"
-                    href={process.env.PUBLIC_URL + "/"}
-                  >
+                  <Link className="nav-column__link" to={ROUTES.home}>
                     Home
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="/products">
+                  <Link className="nav-column__link" to={ROUTES.products}>
                     Products
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="/about-us">
+                  <Link className="nav-column__link" to={ROUTES.aboutUs}>
                     About Us
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="/blog">
+                  <Link className="nav-column__link" to={ROUTES.blog}>
                     Blog
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -89,24 +89,24 @@ const Footer = () => {
               <p className="nav-column__title title">Help</p>
               <ul className="nav-column__list">
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="Contacts">
+                  <Link className="nav-column__link" to={ROUTES.contacts}>
                     Contacts
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="/questions">
+                  <Link className="nav-column__link" to={ROUTES.questions}>
                     FAQ
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="/feedback">
+                  <Link className="nav-column__link" to={ROUTES.feedback}>
                     Feedback
-                  </a>
+                  </Link>
                 </li>
                 <li className="nav-column__item">
-                  <a className="nav-column__link" href="/terms">
+                  <Link className="nav-column__link" to={ROUTES.terms}>
                     Terms & Conditions
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
