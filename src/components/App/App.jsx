@@ -9,7 +9,7 @@ import MainLayout from "../Layout/MainLayout/MainLayout";
 import Home from "../Layout/Home/Home";
 import Products from "../Layout/Products/Products";
 import AboutUs from "../Layout/AboutUs/AboutUs";
-import Contacts from "../Layout/Contacts/Contact";
+import Contacts from "../Layout/Contacts/Contacts";
 import Questions from "../Layout/Questions/Questions";
 import Terms from "../Layout/Terms/Terms";
 import NotFound from "../Layout/NotFound/NotFound";

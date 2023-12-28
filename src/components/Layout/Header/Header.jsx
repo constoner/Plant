@@ -15,7 +15,7 @@ const Header = () => {
           <Logo className="header__logo" />
           <ul className="header__menu menu">
             <li className="menu__item">
-              <NavLink className="menu__link menu__link" to={ROUTES.home}>
+              <NavLink className="menu__link menu__link" to={ROUTES.home} end>
                 Home
               </NavLink>
             </li>

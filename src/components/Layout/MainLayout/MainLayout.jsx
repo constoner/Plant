@@ -11,7 +11,7 @@ const MainLayout = ({ children }) => {
 
   useEffect(() => {
     if (location.hash !== "#!") {
-      window.scrollTo(0, 0);
+      document.documentElement.scrollTo(0, 0);
     }
   }, [location]);
 
