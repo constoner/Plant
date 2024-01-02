@@ -3,6 +3,7 @@ import "./style.css";
 
 import ImgNextGen from "../../misc/ImgNextGen/ImgNextGen";
 import Icon from "../../misc/Icon/Icon";
+import Map from "../Map/Map";
 
 const Address = () => {
   return (
@@ -24,6 +25,7 @@ const Address = () => {
           aria-hidden={true}
           style={{ top: "205px", left: "218px" }}
         />
+        <Map className="adress__map" />
       </div>
       <div className="address__content">
         <h2 className="address__title title">How To Find Us</h2>

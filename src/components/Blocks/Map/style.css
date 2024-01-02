@@ -1,0 +1,22 @@
+.map {
+  position: absolute;
+  z-index: 10;
+  right: 0;
+  bottom: 0;
+  display: block;
+  width: var(--image-width);
+  height: var(--image-height);
+  object-fit: cover;
+}
+
+.map *[class*="ground-pane"] {
+  filter: grayscale(0.25);
+}
+
+.map *[class*="copyrights-pane"] {
+  display: none;
+}
+
+.leaflet-marker-icon {
+  filter: drop-shadow(-7px -0px 3px var(--transparent-black));
+}
