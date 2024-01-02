@@ -1,4 +1,7 @@
 import React, { useEffect } from "react";
+import usePageState from "../../App/usePageState";
+import PageData from "../../App/Context";
+
 import { Outlet, useLocation } from "react-router-dom";
 
 import Header from "../Header/Header";
@@ -7,6 +10,8 @@ import ToTop from "../../misc/ToTop/ToTop";
 import Popup from "../../misc/Popup/Popup";
 
 const MainLayout = ({ children }) => {
+  const state = usePageState();
+
   let location = useLocation();
 
   useEffect(() => {
@@ -18,12 +23,14 @@ const MainLayout = ({ children }) => {
   return (
     <>
       <Header />
-      <main>
-        <div className="container">{children ?? <Outlet />}</div>
-      </main>
+      <PageData.Provider value={state}>
+        <main>
+          <div className="container">{children ?? <Outlet />}</div>
+        </main>
+        <ToTop />
+        <Popup />
+      </PageData.Provider>
       <Footer />
-      <ToTop />
-      <Popup />
     </>
   );
 };
