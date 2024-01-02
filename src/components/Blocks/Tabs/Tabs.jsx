@@ -1,16 +1,16 @@
-import React, { useContext, useEffect, useState, useRef } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import "./style.css";
 import PageData from "../../App/Context.jsx";
 
-import Button from "../../misc/Button/Button.jsx";
-import Card from "../Card/Card";
-import Loading from "../../misc/Loading/Loading";
+import TabsContent from "./TabsContent.jsx";
+
+const BUTTON_VALUE = {
+  closed: "View All",
+  opened: "Collapse",
+};
 
 const Tabs = ({ className }) => {
-  let prevTab = document.querySelector("[data-active='true']");
-  const tabsClass = className ? `${className} tabs` : "tabs";
-  const tabsRef = useRef(null);
-  const [buttonValue, setButtonValue] = useState("View All");
+  const [buttonValue, setButtonValue] = useState(BUTTON_VALUE.closed);
   const { catalogState } = useContext(PageData);
   const {
     loadCatalog,
@@ -21,118 +21,41 @@ const Tabs = ({ className }) => {
     setViewState,
   } = catalogState();
 
-  const tabsHeight = {
-    close: "283px",
-    open: "1000px",
-  };
-
   useEffect(() => {
-    tabsRef.current.style.maxHeight = tabsHeight.close;
     loadCatalog();
   }, [filter]);
 
-  useEffect(() => {
-    tabsHeight.open = `${tabsRef.current.scrollHeight}px`;
-    tabsRef.current.style.maxHeight = viewState
-      ? tabsHeight.open
-      : tabsHeight.close;
-  }, [viewState]);
-
-  const onTabClick = (evt) => {
-    let currentTab = evt.target;
-    prevTab.dataset.active = false;
-    currentTab.dataset.active = true;
-    prevTab = currentTab;
-    tabsRef.current.style.maxHeight = tabsHeight.close;
+  const changeTab = (tab) => {
     setViewState(false);
     setButtonValue("View All");
     setTimeout(() => {
-      setFilter(currentTab.dataset.type);
+      setFilter(tab.dataset.type);
     }, 200);
+  };
+
+  const onTabClick = (evt, ref, prev, height) => {
+    let currentTab = evt.target;
+    prev.dataset.active = false;
+    currentTab.dataset.active = true;
+    prev = currentTab;
+    ref.current.style.maxHeight = height;
+    changeTab(currentTab);
   };
 
   const viewAll = () => {
     setViewState(!viewState);
-    setButtonValue(!viewState ? "Collapse" : "View All");
+    setButtonValue(!viewState ? BUTTON_VALUE.opened : BUTTON_VALUE.closed);
   };
 
   return (
-    <div className={tabsClass}>
-      <div className="tabs__container">
-        <div className="tabs__controls" onClick={onTabClick}>
-          <button
-            className="tabs__button"
-            type="button"
-            data-active="true"
-            data-type="new"
-          >
-            All Plants
-          </button>
-          <button className="tabs__button" type="button" data-type="arrival">
-            New Arrivals
-          </button>
-          <button className="tabs__button" type="button" data-type="sale">
-            Sale
-          </button>
-        </div>
-        <ul className="tabs__content" ref={tabsRef}>
-          {catalogData.partialData?.length ? (
-            catalogData.partialData.map((item, index) => {
-              return (
-                <li className="tabs__item" key={index}>
-                  <Card
-                    name={item.name}
-                    href={item.href}
-                    imgSource={item.image}
-                    rank={item.rank}
-                    price={item.price}
-                  />
-                </li>
-              );
-            })
-          ) : (
-            <>
-              <li className="tabs__item">
-                <Loading width="270px" height="283px" />
-              </li>
-              <li className="tabs__item">
-                <Loading width="270px" height="283px" />
-              </li>
-              <li className="tabs__item">
-                <Loading width="270px" height="283px" />
-              </li>
-              <li className="tabs__item">
-                <Loading width="270px" height="283px" />
-              </li>
-            </>
-          )}
-          {setTimeout(viewState, 200)
-            ? catalogData.restData?.map((item, index) => {
-                return (
-                  <li className="tabs__item" key={index}>
-                    <Card
-                      name={item.name}
-                      href={item.href}
-                      imgSource={item.image}
-                      rank={item.rank}
-                      price={item.price}
-                    />
-                  </li>
-                );
-              })
-            : null}
-        </ul>
-      </div>
-      <Button
-        className="tabs__view-button"
-        variant="button"
-        type="button"
-        onClick={viewAll}
-        disabled={catalogData.restData ? false : true}
-      >
-        {buttonValue}
-      </Button>
-    </div>
+    <TabsContent
+      className={className}
+      buttonValue={buttonValue}
+      onButtonClick={viewAll}
+      onTabClick={onTabClick}
+      view={viewState}
+      catalogData={catalogData}
+    />
   );
 };
 
