@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-import ROUTES from "../../../utils/ROUTES";
+import { HEADER_LINKS } from "./HEADER_LINKS";
 import { NavLink } from "react-router-dom";
 
 import Logo from "../../misc/Logo/Logo";
@@ -14,31 +14,15 @@ const Header = () => {
         <nav className="header__nav">
           <Logo className="header__logo" />
           <ul className="header__menu menu">
-            <li className="menu__item">
-              <NavLink className="menu__link menu__link" to={ROUTES.home} end>
-                Home
-              </NavLink>
-            </li>
-            <li className="menu__item">
-              <NavLink className="menu__link" to={ROUTES.products}>
-                Products
-              </NavLink>
-            </li>
-            <li className="menu__item">
-              <NavLink className="menu__link" to={ROUTES.aboutUs}>
-                About Us
-              </NavLink>
-            </li>
-            <li className="menu__item">
-              <NavLink className="menu__link" to={ROUTES.blog}>
-                Blog
-              </NavLink>
-            </li>
-            <li className="menu__item">
-              <NavLink className="menu__link" to={ROUTES.contacts}>
-                Contacts
-              </NavLink>
-            </li>
+            {HEADER_LINKS.map((item, index) => {
+              return (
+                <li className="menu__item" key={`header_${index}`}>
+                  <NavLink className="menu__link menu__link" to={item.link} end>
+                    {item.name}
+                  </NavLink>
+                </li>
+              );
+            })}
           </ul>
           <ul className="header__user-menu user-menu">
             <li className="user-menu__item">

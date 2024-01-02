@@ -16,7 +16,7 @@ const MainLayout = ({ children }) => {
   }, [location]);
 
   return (
-    <div>
+    <>
       <Header />
       <main>
         <div className="container">{children ?? <Outlet />}</div>
@@ -24,7 +24,7 @@ const MainLayout = ({ children }) => {
       <Footer />
       <ToTop />
       <Popup />
-    </div>
+    </>
   );
 };
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-import ROUTES from "../../../utils/ROUTES";
+import { FOOTER_LINKS } from "./FOOTER_LINKS";
 import { Link } from "react-router-dom";
 
 import Logo from "../../misc/Logo/Logo";
@@ -62,52 +62,42 @@ const Footer = () => {
             <div className="footer__column nav-column">
               <p className="nav-column__title title">Navigation</p>
               <ul className="nav-column__list">
-                <li className="nav-column__item">
-                  <Link className="nav-column__link" to={ROUTES.home}>
-                    Home
-                  </Link>
-                </li>
-                <li className="nav-column__item">
-                  <Link className="nav-column__link" to={ROUTES.products}>
-                    Products
-                  </Link>
-                </li>
-                <li className="nav-column__item">
-                  <Link className="nav-column__link" to={ROUTES.aboutUs}>
-                    About Us
-                  </Link>
-                </li>
-                <li className="nav-column__item">
-                  <Link className="nav-column__link" to={ROUTES.blog}>
-                    Blog
-                  </Link>
-                </li>
+                {FOOTER_LINKS.map((item, index) => {
+                  if (item.column === "navigation") {
+                    return (
+                      <li
+                        className="nav-column__item"
+                        key={`footer_nav_${index}`}
+                      >
+                        <Link className="nav-column__link" to={item.link}>
+                          {item.name}
+                        </Link>
+                      </li>
+                    );
+                  }
+                  return null;
+                })}
               </ul>
             </div>
 
             <div className="footer__column nav-column">
               <p className="nav-column__title title">Help</p>
               <ul className="nav-column__list">
-                <li className="nav-column__item">
-                  <Link className="nav-column__link" to={ROUTES.contacts}>
-                    Contacts
-                  </Link>
-                </li>
-                <li className="nav-column__item">
-                  <Link className="nav-column__link" to={ROUTES.questions}>
-                    FAQ
-                  </Link>
-                </li>
-                <li className="nav-column__item">
-                  <Link className="nav-column__link" to={ROUTES.feedback}>
-                    Feedback
-                  </Link>
-                </li>
-                <li className="nav-column__item">
-                  <Link className="nav-column__link" to={ROUTES.terms}>
-                    Terms & Conditions
-                  </Link>
-                </li>
+                {FOOTER_LINKS.map((item, index) => {
+                  if (item.column === "help") {
+                    return (
+                      <li
+                        className="nav-column__item"
+                        key={`footer_help_${index}`}
+                      >
+                        <Link className="nav-column__link" to={item.link}>
+                          {item.name}
+                        </Link>
+                      </li>
+                    );
+                  }
+                  return null;
+                })}
               </ul>
             </div>
           </nav>

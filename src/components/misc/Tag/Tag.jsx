@@ -3,7 +3,8 @@ import "./style.css";
 
 const Tag = ({
   className,
-  value = "Hi! I'm tag!",
+  title = "Hi! I'm tag!",
+  content = null,
   rtl = false,
   posX = 10,
   posY = 10,
@@ -22,7 +23,8 @@ const Tag = ({
 
   return (
     <div className={tagClass} aria-hidden="true" style={tagStyle}>
-      <span className="tag__text">{value}</span>
+      <p className="tag__title">{title}</p>
+      <p className="tag__content">{content}</p>
       <span className="tag__tick" style={tickStyle}>
         <span className="tag__point"></span>
       </span>

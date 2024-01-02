@@ -31,7 +31,7 @@ const About = () => {
         <ImgNextGen
           className="about__image"
           srcJpgX2="/images/decoration/promo-2@2x.jpg"
-          fallback="/images/decoration/promo-2@2x.jpg"
+          fallback="/images/decoration/promo-2.jpg"
           alt="Beautiful bonsai tree in a wide pot with a bright green crown."
           width="446"
           height="440"

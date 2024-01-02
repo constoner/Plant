@@ -1,7 +1,10 @@
 .tag {
   position: absolute;
+  z-index: 10;
   min-width: 150px;
+  max-width: 175px;
   padding: 16px 32px;
+  padding-bottom: 0;
   font-family: var(--DMSans);
   font-size: 16px;
   font-weight: 400;
@@ -10,15 +13,30 @@
   background-color: var(--middle-green-2-transparent);
   text-align: center;
   border-radius: 4px;
+  cursor: pointer;
 }
 
-.tag__text {
-  display: block;
+.tag__title {
+  margin: 0;
+}
+
+.tag__content {
+  margin: 8px -18px;
+  max-height: 0;
+  line-height: 125%;
+  text-align: left;
+  overflow-y: hidden;
+  transition: max-height 0.5s ease-in-out;
+  will-change: max-height;
+}
+
+.tag:hover .tag__content {
+  max-height: 1000px;
 }
 
 .tag__tick {
   position: absolute;
-  top: 50%;
+  top: 22px;
   height: 4px;
   background-color: var(--middle-green-2-transparent);
   transform: translateY(-50%);

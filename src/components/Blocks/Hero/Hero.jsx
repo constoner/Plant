@@ -65,7 +65,8 @@ const Hero = () => {
         </div>
         <Tag
           className="hero__tag"
-          value="Cactus stem"
+          title="Cactus stem"
+          content="The cactus stem is the thick, fleshy, and spiny part of a cactus plant. It stores water, nutrients, and helps the plant survive in arid environments."
           rtl={false}
           posX="-42"
           posY="175"
@@ -73,7 +74,8 @@ const Hero = () => {
         />
         <Tag
           className="hero__tag"
-          value="Cactus Thorn"
+          title="Cactus Thorn"
+          content="The cactus thorn is a sharp structure that protects the plant from animals and reduces water loss."
           rtl={true}
           posX="-47"
           posY="78"
@@ -81,7 +83,8 @@ const Hero = () => {
         />
         <Tag
           className="hero__tag"
-          value="Plant Media"
+          title="Plant Media"
+          content="Plant media, or growing media, supports and nourishes plants in containers. It provides physical support, nutrients, and water retention for the roots. Different materials like soil, peat moss, coco coir, and perlite can be used. The choice depends on the plants' needs and desired drainage."
           rtl={true}
           posX="-35"
           posY="557"
