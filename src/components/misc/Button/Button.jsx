@@ -6,6 +6,7 @@ const Button = ({
   className,
   variant = "a",
   isSmall = false,
+  innerRef = null,
   ...props
 }) => {
   const CustomButton = `${variant}`;
@@ -16,7 +17,7 @@ const Button = ({
   }
 
   return (
-    <CustomButton className={buttonClass} {...props}>
+    <CustomButton className={buttonClass} ref={innerRef} {...props}>
       {children}
     </CustomButton>
   );

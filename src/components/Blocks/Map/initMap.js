@@ -1,5 +1,5 @@
-import L from "./leaflet/leaflet.js";
-import "./leaflet/leaflet.css";
+import L from "../../../vendor/leaflet/leaflet.js";
+import "../../../vendor/leaflet/leaflet.css";
 import LATLNG from "./LATLNG.js";
 
 let map = null;

@@ -12,6 +12,7 @@
 }
 
 .blog__list {
+  min-height: 250px;
   margin: 0;
   padding: 0;
   padding: 0 56px;

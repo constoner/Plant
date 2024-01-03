@@ -2,33 +2,38 @@ import React, { useContext, useEffect, useState } from "react";
 import "./style.css";
 import PageData from "../../App/Context.jsx";
 
-import BlogPost from "../BlogPost/BlogPost";
-import Button from "../../misc/Button/Button";
+import BlogListContent from "./BlogListContent.jsx";
 
 const BlogList = () => {
   const { blogState } = useContext(PageData);
-  const { loadBlog, blogData } = blogState();
+  const { loadBlog, blogData, setBlogData, blogLoading, setBlogLoading } =
+    blogState();
+  const [chunkNo, setChunkNo] = useState(1);
 
   useEffect(() => {
-    loadBlog();
+    loadBlog(chunkNo).then((data) => setBlogData(data));
+    setChunkNo(chunkNo + 1);
   }, []);
 
+  const onButtonClick = (ref) => {
+    setBlogLoading(true);
+    loadBlog(chunkNo).then((data) => {
+      if (data) {
+        setBlogData((posts) => [...posts, ...data]);
+      } else {
+        ref.current.toggleAttribute("disabled");
+      }
+    });
+    setBlogLoading(false);
+    setChunkNo(chunkNo + 1);
+  };
+
   return (
-    <section className="blog">
-      <h1 className="blog__title title">Our News</h1>
-      <ul className="blog__list">
-        {blogData.map((item, index) => {
-          return (
-            <li className="blog__item" key={`blog_${index}`}>
-              <BlogPost className="blog__post" blogData={item} />
-            </li>
-          );
-        })}
-      </ul>
-      <Button className="blog__button" variant="button" type="button">
-        View More
-      </Button>
-    </section>
+    <BlogListContent
+      blogData={blogData}
+      onButtonClick={onButtonClick}
+      loading={blogLoading}
+    />
   );
 };
 

@@ -18,7 +18,7 @@ const usePageState = () => {
       .catch((e) => {
         setCatalogLoading(false);
         console.warn(
-          "Data is corrupted. Please, reload the page" + ", " + e.message
+          `"Data is corrupted. Please, reload the page, ${e.message}`
         );
       });
   };
@@ -49,7 +49,7 @@ const usePageState = () => {
       .catch((e) => {
         setReviewsLoading(false);
         console.warn(
-          "Data is corrupted. Please, reload the page" + ", " + e.message
+          `"Data is corrupted. Please, reload the page, ${e.message}`
         );
       });
 
@@ -74,7 +74,7 @@ const usePageState = () => {
       .catch((e) => {
         setGalleryLoading(false);
         console.warn(
-          "Data is corrupted. Please, reload the page" + ", " + e.message
+          `"Data is corrupted. Please, reload the page, ${e.message}`
         );
       });
 
@@ -90,16 +90,16 @@ const usePageState = () => {
 
   const [blogData, setBlogData] = useState([]);
   const [blogLoading, setBlogLoading] = useState(true);
-  const loadBlog = () =>
-    getData(`${RESOURCES.blog}-1.json`, setBlogLoading, setBlogData)
+  const loadBlog = (chunkNo) =>
+    getData(`${RESOURCES.blog}-${chunkNo}.json`, setBlogLoading, setBlogData)
       .then((data) => {
-        setBlogData(data);
         setBlogLoading(false);
+        return data;
       })
       .catch((e) => {
         setBlogLoading(false);
         console.warn(
-          "Data is corrupted. Please, reload the page" + ", " + e.message
+          `"Data is corrupted. Please, reload the page, ${e.message}`
         );
       });
 

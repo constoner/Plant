@@ -10,9 +10,9 @@ const shorterText = (text) => {
   return text.substr(0, POST_LENGTH).padEnd(POST_LENGTH + 3, ".");
 };
 
-const BlogPost = ({ className, blogData }) => {
+const BlogPost = ({ className, postData }) => {
   const postClassName = className ? `${className} post` : "post";
-  const { name, date, href, image, content } = blogData;
+  const { name, date, href, image, content } = postData;
   return (
     <section className={postClassName}>
       <h2 className="post__title title">
