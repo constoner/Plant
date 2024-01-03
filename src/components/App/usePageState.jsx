@@ -88,6 +88,31 @@ const usePageState = () => {
     };
   };
 
+  const [blogData, setBlogData] = useState([]);
+  const [blogLoading, setBlogLoading] = useState(true);
+  const loadBlog = () =>
+    getData(`${RESOURCES.blog}-1.json`, setBlogLoading, setBlogData)
+      .then((data) => {
+        setBlogData(data);
+        setBlogLoading(false);
+      })
+      .catch((e) => {
+        setBlogLoading(false);
+        console.warn(
+          "Data is corrupted. Please, reload the page" + ", " + e.message
+        );
+      });
+
+  const blogState = () => {
+    return {
+      blogData,
+      setBlogData,
+      blogLoading,
+      setBlogLoading,
+      loadBlog,
+    };
+  };
+
   const [popup, setPopup] = useState({
     isBad: false,
     value: "",
@@ -101,6 +126,7 @@ const usePageState = () => {
     catalogState,
     reviewsState,
     galleryState,
+    blogState,
     popupState,
   };
 };

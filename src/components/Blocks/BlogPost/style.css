@@ -1,0 +1,53 @@
+
+.post {
+  --content-pad: 45%;
+  --post-height: 250px;
+  position: relative;
+  height: var(--post-height);
+  padding: 24px;
+  padding-left: var(--content-pad);
+}
+
+.post__title {
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.post__date {
+  margin: 0;
+  margin-bottom: 12px;
+  font-size: 14px;
+  color: var(--transparent-black);
+}
+
+.post__image  {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  width: 375px;
+  height: calc(var(--post-height) - 24 * 2px);
+}
+
+.post__img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.post__content {
+  margin: 0;
+  margin-bottom: 24px;
+  height: 45px;
+  overflow: hidden;
+}
+
+.post__button {
+  position: absolute;
+  bottom: 24px;
+  left: var(--content-pad);
+  display: block;
+  width: fit-content;
+}
