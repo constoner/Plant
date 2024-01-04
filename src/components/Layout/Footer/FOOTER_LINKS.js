@@ -28,7 +28,7 @@ export const FOOTER_LINKS = [
   },
   {
     name: "FAQ",
-    link: ROUTES.questions,
+    link: ROUTES.faq,
     column: "help"
   },
   {
@@ -37,8 +37,8 @@ export const FOOTER_LINKS = [
     column: "help"
   },
   {
-    name: "Terms & Conditions",
-    link: ROUTES.terms,
+    name: "Help",
+    link: ROUTES.help,
     column: "help"
   },
 ];

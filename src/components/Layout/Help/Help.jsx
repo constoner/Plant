@@ -10,10 +10,10 @@ import ReturnData from "./helpData/ReturnData.json";
 const Help = () => {
   return (
     <div className="help">
-      <FAQ FAQData={FAQData} />
-      <LongRead longreadData={TermsData} />
-      <LongRead longreadData={PrivacyData} />
-      <LongRead longreadData={ReturnData} />
+      <LongRead longreadData={TermsData} id="terms" />
+      <LongRead longreadData={ReturnData} id="return" />
+      <LongRead longreadData={PrivacyData} id="privacy" />
+      <FAQ FAQData={FAQData} id="faq" />
     </div>
   );
 };

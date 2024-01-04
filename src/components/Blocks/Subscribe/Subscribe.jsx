@@ -1,8 +1,10 @@
 import React, { useContext } from "react";
 import "./style.css";
 import PageData from "../../App/Context.jsx";
+import ROUTES from "../../../utils/ROUTES.js";
 
 import TextInput from "../../misc/TextInput/TextInput";
+import { Link } from "react-router-dom";
 
 const Subscribe = () => {
   const { popupState } = useContext(PageData);
@@ -55,6 +57,10 @@ const Subscribe = () => {
         required={true}
         buttonCB={onSubscribe}
       />
+      <p className="subscribe__small-text">
+        By submitting this form you agree to{" "}
+        <Link to={ROUTES.privacy}>the Privacy Policy</Link>
+      </p>
     </div>
   );
 };

@@ -1,9 +1,9 @@
 import React from "react";
 import "./style.css";
 
-const LongRead = ({ longreadData }) => {
+const LongRead = ({ id, longreadData }) => {
   return longreadData && typeof longreadData === "object" ? (
-    <section className="longread">
+    <section className="longread" id={id}>
       <h2 className="longread__title title">{longreadData.title}</h2>
       <div className="longread__back">
         <div className="longread__container">

@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import usePageState from "../../App/usePageState";
 import PageData from "../../App/Context";
+import { useScrollToAnchor } from "../../../utils/utils";
 
 import { Outlet, useLocation } from "react-router-dom";
 
@@ -10,6 +11,8 @@ import ToTop from "../../misc/ToTop/ToTop";
 import Popup from "../../misc/Popup/Popup";
 
 const MainLayout = ({ children }) => {
+  useScrollToAnchor();
+
   const state = usePageState();
 
   let location = useLocation();

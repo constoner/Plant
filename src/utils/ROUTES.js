@@ -7,8 +7,9 @@ const ROUTES = {
   feedback: process.env.PUBLIC_URL + "/feedback",
   help: process.env.PUBLIC_URL + "/help",
   terms: process.env.PUBLIC_URL + "/help#terms",
+  return: process.env.PUBLIC_URL + "/help#return",
+  privacy: process.env.PUBLIC_URL + "/help#privacy",
   faq: process.env.PUBLIC_URL + "/help#faq",
-  privacu: process.env.PUBLIC_URL + "/help#privacy",
 };
 
 export default ROUTES;

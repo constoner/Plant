@@ -1,3 +1,27 @@
+import { useEffect } from "react";
+import { useLocation } from "react-router-dom";
+
+const useScrollToAnchor = () => {
+  const { pathname, hash, key } = useLocation()
+
+  useEffect(() => {
+    if (hash === '') window.scrollTo(0, 0)
+    else {
+      setTimeout(() => {
+        const id = hash.replace('#', '')
+        const element = document.getElementById(id)
+        if (element) {
+          element.scrollIntoView({
+            block: 'start',
+            inline: 'nearest',
+            behavior: 'smooth',
+          })
+        }
+      }, 0)
+    }
+  }, [pathname, hash, key])
+}
+
 const getData = (url) => {
   return fetch(process.env.PUBLIC_URL + url, {
     headers: {
@@ -47,4 +71,4 @@ const debounce = (cb, timing) => {
   }
 }
 
-export { getData, filterData, debounce };
+export { useScrollToAnchor, getData, filterData, debounce };

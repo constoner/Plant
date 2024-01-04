@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 
+import ROUTES from "../../../utils/ROUTES";
 import { FOOTER_LINKS } from "./FOOTER_LINKS";
 import { Link } from "react-router-dom";
 
@@ -14,7 +15,10 @@ const Footer = () => {
         <div className="footer__container">
           <div className="footer__social">
             <Logo className="footer__logo" />
-            <p className="footer__text">© 2023 Plant. All rights reserved</p>
+            <p className="footer__text">
+              © 2023 Plant. All rights reserved.{" "}
+              <Link to={ROUTES.terms}>Terms & Conditions</Link>
+            </p>
             <div className="footer__text">
               <address>
                 1 Miskatonic Ln, North Providence, Rhode Island, 02911,

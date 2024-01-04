@@ -5,7 +5,7 @@ import FAQcontent from "./FAQcontent.jsx";
 
 const MIN_QUESTION_LENGTH = 10;
 
-const FAQ = ({ FAQData }) => {
+const FAQ = ({ FAQData, id }) => {
   const { popupState } = useContext(PageData);
 
   const onSuccess = (data, cb, form) => {
@@ -37,7 +37,7 @@ const FAQ = ({ FAQData }) => {
   };
 
   return FAQData && FAQData.length ? (
-    <FAQcontent data={FAQData} buttonCB={onSend} />
+    <FAQcontent id={id} data={FAQData} buttonCB={onSend} />
   ) : null;
 };
 
