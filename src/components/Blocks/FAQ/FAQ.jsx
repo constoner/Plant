@@ -1,12 +1,11 @@
 import React, { useContext } from "react";
 import PageData from "../../App/Context.jsx";
 
-import FAQdata from "./FAQdata.json";
 import FAQcontent from "./FAQcontent.jsx";
 
 const MIN_QUESTION_LENGTH = 10;
 
-const FAQ = () => {
+const FAQ = ({ FAQData }) => {
   const { popupState } = useContext(PageData);
 
   const onSuccess = (data, cb, form) => {
@@ -37,8 +36,8 @@ const FAQ = () => {
       : onMistake();
   };
 
-  return FAQdata && FAQdata.length ? (
-    <FAQcontent data={FAQdata} buttonCB={onSend} />
+  return FAQData && FAQData.length ? (
+    <FAQcontent data={FAQData} buttonCB={onSend} />
   ) : null;
 };
 

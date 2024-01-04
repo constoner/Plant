@@ -1,4 +1,4 @@
-.terms__title {
+.longread__title {
   margin: 0;
   margin-bottom: 12px;
   font-size: 40px;
@@ -6,7 +6,7 @@
   text-align: center;
 }
 
-.terms__back {
+.longread__back {
   width: 748px;
   margin: 0 auto;
   padding: 24px;
@@ -14,28 +14,28 @@
   border-radius: 8px;
 }
 
-.terms__container {
+.longread__container {
   width: 100%;
   height: calc(100vh - 540px);
   overflow: auto;
   scrollbar-width: thin;
 }
 
-.terms__container::-webkit-scrollbar {
+.longread__container::-webkit-scrollbar {
     width: 6px;
 }
 
-.terms__container::-webkit-scrollbar-track {
+.longread__container::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
     border-radius: 3px;
 }
 
-.terms__container::-webkit-scrollbar-thumb {
+.longread__container::-webkit-scrollbar-thumb {
     border-radius: 3px;
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
 }
 
-.terms p {
+.longread p {
   margin: 0;
   margin-bottom: 8px;
   font-size: 14px;

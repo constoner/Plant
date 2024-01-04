@@ -21,4 +21,8 @@ export const HEADER_LINKS = [
     name: "Contacts",
     link: ROUTES.contacts,
   },
+  {
+    name: "Help",
+    link: ROUTES.help,
+  },
 ];

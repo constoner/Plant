@@ -11,8 +11,7 @@ import Products from "../Layout/Products/Products";
 import AboutUs from "../Layout/AboutUs/AboutUs";
 import Blog from "../Layout/Blog/Blog";
 import Contacts from "../Layout/Contacts/Contacts";
-import Questions from "../Layout/Questions/Questions";
-import Terms from "../Layout/Terms/Terms";
+import Help from "../Layout/Help/Help";
 import NotFound from "../Layout/NotFound/NotFound";
 
 const router = createBrowserRouter([
@@ -43,12 +42,8 @@ const router = createBrowserRouter([
         element: <Contacts />,
       },
       {
-        path: ROUTES.questions,
-        element: <Questions />,
-      },
-      {
-        path: ROUTES.terms,
-        element: <Terms />,
+        path: ROUTES.help,
+        element: <Help />,
       },
     ],
   },
