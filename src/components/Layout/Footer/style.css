@@ -53,7 +53,7 @@
   width: 48px;
   height: 48px;
   padding: 12px;
-  fill: var(--middle-green-2);
+  fill: var(--middle-green);
   background-color: var(--ghost-green-1);
   border-radius: 4px;
 }

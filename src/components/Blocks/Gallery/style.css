@@ -66,7 +66,7 @@ picture {
   font-family: var(--Nunito);
   font-size: 30px;
   font-weight: 700;
-  color: var(--light-green);
-  border: 2px solid var(--light-green);
+  color: var(--middle-green-transparent);
+  border: 2px solid var(--middle-green-transparent);
   border-radius: 8px;
 }

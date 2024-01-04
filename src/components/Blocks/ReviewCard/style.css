@@ -8,7 +8,7 @@
   top: 16px;
   right: 24px;
   display: block;
-  color: var(--additional-dark-green);
+  color: var(--dark-green);
 }
 
 .review-card__header {
@@ -52,7 +52,7 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 100%;
-  color: var(--secondary-white);
+  color: var(--additional-white);
 }
 
 .review-card__container {

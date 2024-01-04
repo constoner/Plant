@@ -21,7 +21,7 @@
 }
 
 .tabs__button[data-active="true"] {
-  color: var(--middle-green-2);
+  color: var(--middle-green);
 }
 
 .tabs__content {

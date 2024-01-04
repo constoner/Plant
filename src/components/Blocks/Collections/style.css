@@ -41,12 +41,16 @@
   gap: 24px;
 }
 
-.collections__gallery div:nth-child(2n+1) {
-  background-color: var(--pastel-warm);
+.collections__gallery div:nth-child(3n+1) {
+  background-color: var(--card-1);
 }
 
-.collections__gallery div:nth-child(2n) {
-  background-color: var(--pastel-cold);
+.collections__gallery div:nth-child(3n+2) {
+  background-color: var(--card-2);
+}
+
+.collections__gallery div:nth-child(3n+3) {
+  background-color: var(--card-3);
 }
 
 .colection__image-wrapper {

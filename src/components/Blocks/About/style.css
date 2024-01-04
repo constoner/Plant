@@ -25,7 +25,7 @@
   display: block;
   width: var(--image-width);
   height: var(--image-height);
-  background-color: var(--middle-green-2);
+  background-color: var(--middle-green);
   content: "";
 }
 
@@ -58,7 +58,7 @@
   font-size: 18px;
   font-weight: 500;
   line-height: normal;
-  color: var(--middle-green-2);
+  color: var(--middle-green);
 }
 
 .about__text {

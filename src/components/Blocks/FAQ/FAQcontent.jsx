@@ -7,10 +7,10 @@ import TextInput from "../../misc/TextInput/TextInput";
 const FAQcontent = ({ id, data, buttonCB }) => {
   return (
     <section className="questions" id={id}>
-      <h2 className="questions__title title">Frequently Asked Questions</h2>
+      <h2 className="questions__title title">{data.title}</h2>
       <div className="questions__container">
         <dl className="questions__list">
-          {data.map((item, index) => {
+          {data["content"].map((item, index) => {
             return (
               <div className="questions__wrapper" key={index}>
                 <dd>{item.question}</dd>

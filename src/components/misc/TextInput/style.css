@@ -31,12 +31,12 @@
 }
 
 .text-input__input:focus {
-  box-shadow: 0 0 0 2px var(--middle-green-2) inset;
+  box-shadow: 0 0 0 2px var(--middle-green) inset;
   outline: none;
 }
 
 .text-input__input:active {
-  box-shadow: 0 0 0 2px var(--middle-green-1) inset;
+  box-shadow: 0 0 0 2px var(--middle-green) inset;
   outline: none;
 }
 

@@ -10,7 +10,7 @@
   font-weight: 400;
   line-height: 100%;
   color: var(--main-white);
-  background-color: var(--middle-green-2-transparent);
+  background-color: var(--middle-green-transparent);
   text-align: center;
   border-radius: 4px;
   cursor: pointer;
@@ -38,7 +38,7 @@
   position: absolute;
   top: 22px;
   height: 4px;
-  background-color: var(--middle-green-2-transparent);
+  background-color: var(--middle-green-transparent);
   transform: translateY(-50%);
 }
 

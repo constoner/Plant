@@ -2,7 +2,7 @@
   position: relative;
   width: 597px;
   height: 204px;
-  background-color: var(--middle-green-2);
+  background-color: var(--middle-green);
 }
 
 .swiper::before {
@@ -13,7 +13,7 @@
   display: block;
   width: 100%;
   height: 100%;
-  box-shadow: 0 0 16px 16px var(--middle-green-2) inset;
+  box-shadow: 0 0 16px 16px var(--middle-green) inset;
   content: "";
   pointer-events: none;
 }
@@ -73,7 +73,7 @@
 .swiper button:disabled {
   opacity: 1 !important;
   color: var(--faded-green);
-  background-color: var(--additional-dark-green);
+  background-color: var(--dark-green);
 }
 
 .swiper button svg {

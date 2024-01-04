@@ -36,7 +36,7 @@ const FAQ = ({ FAQData, id }) => {
       : onMistake();
   };
 
-  return FAQData && FAQData.length ? (
+  return FAQData && typeof FAQData === "object" ? (
     <FAQcontent id={id} data={FAQData} buttonCB={onSend} />
   ) : null;
 };

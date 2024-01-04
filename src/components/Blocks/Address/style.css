@@ -25,7 +25,7 @@
   display: block;
   width: var(--image-width);
   height: var(--image-height);
-  background-color: var(--middle-green-2);
+  background-color: var(--middle-green);
   content: "";
 }
 
@@ -43,7 +43,7 @@
   position: absolute;
   display: block;
   transform: translate(-50%, -75%);
-  color: var(--middle-green-2);
+  color: var(--middle-green);
   filter: drop-shadow(-7px -0px 3px var(--transparent-black));
 }
 
@@ -87,7 +87,7 @@
   left: -22px;
   width: 22px;
   height: 22px;
-  color: var(--middle-green-2-transparent);
-  fill: var(--middle-green-2-transparent);
+  color: var(--middle-green-transparent);
+  fill: var(--middle-green-transparent);
   transform: translate(-50%,-50%);
 }
