@@ -15,7 +15,7 @@
 
 .post__date {
   margin: 0;
-  margin-bottom: 12px;
+  margin-bottom: 18px;
   font-size: 14px;
   color: var(--transparent-black);
 }
@@ -39,15 +39,14 @@
 
 .post__content {
   margin: 0;
-  margin-bottom: 24px;
-  height: 45px;
+  width: 400px;
   overflow: hidden;
 }
 
 .post__button {
   position: absolute;
   bottom: 24px;
-  left: var(--content-pad);
+  right: 24px;
   display: block;
   width: fit-content;
 }

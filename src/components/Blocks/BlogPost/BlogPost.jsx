@@ -4,7 +4,7 @@ import "./style.css";
 import ImgNextGen from "../../misc/ImgNextGen/ImgNextGen";
 import Button from "../../misc/Button/Button";
 
-const POST_LENGTH = 130;
+const POST_LENGTH = 250;
 
 const shorterText = (text) => {
   return text.substr(0, POST_LENGTH).padEnd(POST_LENGTH + 3, ".");
