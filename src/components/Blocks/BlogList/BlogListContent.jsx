@@ -5,7 +5,7 @@ import BlogPost from "../BlogPost/BlogPost";
 import Button from "../../misc/Button/Button";
 import Loading from "../../misc/Loading/Loading";
 
-const BlogListContent = ({ blogData, onButtonClick, loading }) => {
+const BlogListContent = ({ blogData, onButtonClick, buttonName, loading }) => {
   const buttonRef = useRef(null);
 
   return (
@@ -33,7 +33,7 @@ const BlogListContent = ({ blogData, onButtonClick, loading }) => {
         onClick={() => onButtonClick(buttonRef)}
         innerRef={buttonRef}
       >
-        View More
+        {buttonName}
       </Button>
     </section>
   );

@@ -3,7 +3,7 @@
   --content-pad: 45%;
   --post-height: 250px;
   position: relative;
-  height: var(--post-height);
+  min-height: var(--post-height);
   padding: 24px;
   padding-left: var(--content-pad);
 }

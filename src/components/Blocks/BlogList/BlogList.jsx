@@ -4,11 +4,17 @@ import PageData from "../../App/Context.jsx";
 
 import BlogListContent from "./BlogListContent.jsx";
 
+const BUTTON_NAME = {
+  enabled: "View More",
+  disabled: "That's all",
+};
+
 const BlogList = () => {
   const { blogState } = useContext(PageData);
   const { loadBlog, blogData, setBlogData, blogLoading, setBlogLoading } =
     blogState();
   const [chunkNo, setChunkNo] = useState(1);
+  const [buttonName, setButtonName] = useState(BUTTON_NAME.enabled);
 
   useEffect(() => {
     loadBlog(chunkNo).then((data) => setBlogData(data));
@@ -22,6 +28,7 @@ const BlogList = () => {
         setBlogData((posts) => [...posts, ...data]);
       } else {
         ref.current.toggleAttribute("disabled");
+        setButtonName(BUTTON_NAME.disabled);
       }
     });
     setBlogLoading(false);
@@ -32,6 +39,7 @@ const BlogList = () => {
     <BlogListContent
       blogData={blogData}
       onButtonClick={onButtonClick}
+      buttonName={buttonName}
       loading={blogLoading}
     />
   );
