@@ -34,7 +34,7 @@ const TabsContent = ({
   buttonValue,
   onButtonClick,
   onTabClick,
-  view,
+  viewState,
   catalogData,
 }) => {
   const tabsClass = className ? `${className} tabs` : "tabs";
@@ -45,10 +45,10 @@ const TabsContent = ({
   useEffect(() => {
     tabsRef.current.style.maxHeight = TABS_HEIGHT.closed;
     TABS_HEIGHT.opened = `${tabsRef.current.scrollHeight}px`;
-    tabsRef.current.style.maxHeight = view
+    tabsRef.current.style.maxHeight = viewState
       ? TABS_HEIGHT.opened
       : TABS_HEIGHT.closed;
-  }, [view]);
+  }, [viewState]);
 
   return (
     <div className={tabsClass}>
@@ -92,7 +92,7 @@ const TabsContent = ({
           ) : (
             <TabsSpare />
           )}
-          {setTimeout(view, 200)
+          {viewState
             ? catalogData.restData?.map((item, index) => {
                 return (
                   <li className="tabs__item" key={index}>

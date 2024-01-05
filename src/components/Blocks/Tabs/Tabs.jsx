@@ -43,8 +43,8 @@ const Tabs = ({ className }) => {
   };
 
   const viewAll = () => {
-    setViewState(!viewState);
     setButtonValue(!viewState ? BUTTON_VALUE.opened : BUTTON_VALUE.closed);
+    setViewState(!viewState);
   };
 
   return (
@@ -53,7 +53,7 @@ const Tabs = ({ className }) => {
       buttonValue={buttonValue}
       onButtonClick={viewAll}
       onTabClick={onTabClick}
-      view={viewState}
+      viewState={viewState}
       catalogData={catalogData}
     />
   );
