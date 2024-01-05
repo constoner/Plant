@@ -2,7 +2,8 @@
   position: fixed;
   display: block;
   visibility: hidden;
-  right: 44px;
+  z-index: 50;
+  right: calc(50vw - (1440px / 2) + 0px);
   bottom: 64px;
   margin: 0;
   padding: 0;
