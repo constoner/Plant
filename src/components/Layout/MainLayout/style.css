@@ -1,14 +1,14 @@
 .container.enter {
   opacity: 0;
+  transition: opacity 0.5s;
 }
 .container.enter-active {
   opacity: 1;
-  transition: opacity 0.5s;
 }
 .container.exit {
   opacity: 1;
+  transition: opacity 0.5s;
 }
 .container.exit-active {
   opacity: 0;
-  transition: opacity 0.5s;
 }

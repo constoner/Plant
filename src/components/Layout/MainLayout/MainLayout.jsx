@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useRef } from "react";
 import "./style.css";
 import usePageState from "../../App/usePageState";
 import PageData from "../../App/Context";
@@ -14,10 +14,9 @@ import Popup from "../../misc/Popup/Popup";
 
 const MainLayout = ({ children }) => {
   useScrollToAnchor();
-
+  const nodRef = useRef(null);
   const state = usePageState();
-
-  let location = useLocation();
+  const location = useLocation();
 
   useEffect(() => {
     if (location.hash !== "#!") {
@@ -31,8 +30,10 @@ const MainLayout = ({ children }) => {
       <PageData.Provider value={state}>
         <main>
           <TransitionGroup component={null}>
-            <CSSTransition key={location.key} timeout={500}>
-              <div className="container">{children ?? <Outlet />}</div>
+            <CSSTransition key={location.key} timeout={500} nodeRef={nodRef}>
+              <div className="container" ref={nodRef}>
+                {children ?? <Outlet />}
+              </div>
             </CSSTransition>
           </TransitionGroup>
         </main>

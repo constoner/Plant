@@ -53,7 +53,7 @@ const NavigationBlock = ({ className, links }) => {
     });
 
     return () => observer.disconnect();
-  }, []);
+  }, [links]);
 
   return <NavigationBlockContent className={className} links={links} />;
 };
