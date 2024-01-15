@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import "./style.css";
+import { transitionProps } from "../../../utils/CONSTANTS";
 
 import NavigationBlockContent from "./NavigationBLockContent";
 
@@ -26,33 +27,31 @@ const onTargetIntersect = (items) => {
 
         setTimeout(() => {
           items[currentAnchor].classList.add("nav-block__link--active");
-        }, 300);
+        }, transitionProps.linkTransition);
       }
     });
 };
 
 const NavigationBlock = ({ className, links }) => {
   useEffect(() => {
-    let observer = null;
-    setTimeout(() => {
-      const anchors = Array.from(
-        document.querySelectorAll("[data-href]")
-      ).reduce((obj, item, index) => {
+    const anchors = Array.from(document.querySelectorAll("[data-href]")).reduce(
+      (obj, item, index) => {
         return {
           ...obj,
           [item.dataset.href]: item,
         };
-      }, {});
+      },
+      {}
+    );
 
-      observer = new IntersectionObserver(
-        onTargetIntersect(anchors),
-        observerOptions
-      );
+    const observer = new IntersectionObserver(
+      onTargetIntersect(anchors),
+      observerOptions
+    );
 
-      Object.values(links).forEach((link) => {
-        observer.observe(document.querySelector(`#${link.id}`));
-      });
-    }, 350);
+    Object.values(links).forEach((link) => {
+      observer.observe(document.querySelector(`#${link.id}`));
+    });
 
     return () => observer?.disconnect();
   }, [links]);

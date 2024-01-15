@@ -1,22 +1,24 @@
-import React, { useEffect, useRef } from "react";
+import React, { useEffect, createRef } from "react";
 import "./style.css";
 import usePageState from "../../App/usePageState";
 import PageData from "../../App/Context";
 import { useScrollToAnchor } from "../../../utils/utils";
 
-import { Outlet, useLocation } from "react-router-dom";
-import { CSSTransition, TransitionGroup } from "react-transition-group";
+import { useLocation, useOutlet } from "react-router-dom";
+import { CSSTransition, SwitchTransition } from "react-transition-group";
+import { transitionProps } from "../../../utils/CONSTANTS";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
 import ToTop from "../../misc/ToTop/ToTop";
 import Popup from "../../misc/Popup/Popup";
 
-const MainLayout = ({ children }) => {
+const MainLayout = () => {
   useScrollToAnchor();
-  const nodRef = useRef(null);
+  const nodeRef = createRef();
   const state = usePageState();
   const location = useLocation();
+  const currentOutlet = useOutlet();
 
   useEffect(() => {
     if (location.hash !== "#!") {
@@ -29,13 +31,26 @@ const MainLayout = ({ children }) => {
       <Header />
       <PageData.Provider value={state}>
         <main>
-          <TransitionGroup component={null}>
-            <CSSTransition key={location.key} timeout={300} nodeRef={nodRef}>
-              <div className="container" ref={nodRef}>
-                {children ?? <Outlet />}
-              </div>
+          <SwitchTransition>
+            <CSSTransition
+              key={location.pathname}
+              nodeRef={nodeRef}
+              timeout={transitionProps.pageTransition}
+              unmountOnExit
+            >
+              {(state) => (
+                <div
+                  className="container"
+                  ref={nodeRef}
+                  style={{
+                    transitionDuration: `${transitionProps.pageTransition}ms`,
+                  }}
+                >
+                  {currentOutlet}
+                </div>
+              )}
             </CSSTransition>
-          </TransitionGroup>
+          </SwitchTransition>
         </main>
         <ToTop />
         <Popup />

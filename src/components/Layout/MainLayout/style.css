@@ -1,14 +1,18 @@
 .container.enter {
   opacity: 0;
-  transition: opacity 0.3s;
 }
+
 .container.enter-active {
   opacity: 1;
+  transition: opacity 300ms;
 }
+
 .container.exit {
   opacity: 1;
-  transition: opacity 0.3s;
+  transform: scale(1);
 }
+
 .container.exit-active {
   opacity: 0;
+  transition: opacity 300ms;
 }

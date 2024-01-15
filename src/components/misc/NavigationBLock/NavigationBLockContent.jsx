@@ -1,5 +1,6 @@
 import React from "react";
 import "./style.css";
+import { transitionProps } from "../../../utils/CONSTANTS";
 
 import ROUTES from "../../../utils/ROUTES";
 
@@ -17,6 +18,9 @@ const NavigationBlockContent = ({ className, links }) => {
                 className="nav-block__link"
                 data-href={item.id}
                 href={ROUTES[item.id]}
+                style={{
+                  "--pseudoTrans": `${transitionProps.linkTransition}ms`,
+                }}
               >
                 {item.name}
               </a>

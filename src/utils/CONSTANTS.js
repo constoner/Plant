@@ -7,6 +7,11 @@ const popupProps = {
   showDelay: 3000,
 };
 
+const transitionProps = {
+  pageTransition: 300,
+  linkTransition: 300,
+};
+
 const catalogMaxRank = 5;
 
-export { scrollProps, popupProps, catalogMaxRank };
+export { scrollProps, popupProps, transitionProps, catalogMaxRank };
