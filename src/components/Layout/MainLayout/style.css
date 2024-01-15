@@ -1,0 +1,14 @@
+.container.enter {
+  opacity: 0;
+}
+.container.enter-active {
+  opacity: 1;
+  transition: opacity 0.5s;
+}
+.container.exit {
+  opacity: 1;
+}
+.container.exit-active {
+  opacity: 0;
+  transition: opacity 0.5s;
+}

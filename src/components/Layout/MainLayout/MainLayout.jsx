@@ -1,9 +1,11 @@
 import React, { useEffect } from "react";
+import "./style.css";
 import usePageState from "../../App/usePageState";
 import PageData from "../../App/Context";
 import { useScrollToAnchor } from "../../../utils/utils";
 
 import { Outlet, useLocation } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from "react-transition-group";
 
 import Header from "../Header/Header";
 import Footer from "../Footer/Footer";
@@ -28,7 +30,11 @@ const MainLayout = ({ children }) => {
       <Header />
       <PageData.Provider value={state}>
         <main>
-          <div className="container">{children ?? <Outlet />}</div>
+          <TransitionGroup component={null}>
+            <CSSTransition key={location.key} timeout={500}>
+              <div className="container">{children ?? <Outlet />}</div>
+            </CSSTransition>
+          </TransitionGroup>
         </main>
         <ToTop />
         <Popup />
