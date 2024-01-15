@@ -1,6 +1,6 @@
 {
   "homepage": "https://constoner.github.io/plant/",
-  "name": "lant",
+  "name": "plant",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
