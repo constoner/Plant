@@ -30,7 +30,7 @@ const MainLayout = ({ children }) => {
       <PageData.Provider value={state}>
         <main>
           <TransitionGroup component={null}>
-            <CSSTransition key={location.key} timeout={500} nodeRef={nodRef}>
+            <CSSTransition key={location.key} timeout={300} nodeRef={nodRef}>
               <div className="container" ref={nodRef}>
                 {children ?? <Outlet />}
               </div>

@@ -3,6 +3,12 @@ import "./style.css";
 
 import NavigationBlockContent from "./NavigationBLockContent";
 
+const observerOptions = {
+  root: null,
+  rootMargin: "0px",
+  threshold: 0.5,
+};
+
 const onTargetIntersect = (items) => {
   let previousAnchor = null;
   let currentAnchor = null;
@@ -27,32 +33,28 @@ const onTargetIntersect = (items) => {
 
 const NavigationBlock = ({ className, links }) => {
   useEffect(() => {
-    const anchors = Array.from(document.querySelectorAll("[data-href]")).reduce(
-      (obj, item, index) => {
+    let observer = null;
+    setTimeout(() => {
+      const anchors = Array.from(
+        document.querySelectorAll("[data-href]")
+      ).reduce((obj, item, index) => {
         return {
           ...obj,
           [item.dataset.href]: item,
         };
-      },
-      {}
-    );
+      }, {});
 
-    const observerOptions = {
-      root: null,
-      rootMargin: "0px",
-      threshold: 0.5,
-    };
+      observer = new IntersectionObserver(
+        onTargetIntersect(anchors),
+        observerOptions
+      );
 
-    const observer = new IntersectionObserver(
-      onTargetIntersect(anchors),
-      observerOptions
-    );
+      Object.values(links).forEach((link) => {
+        observer.observe(document.querySelector(`#${link.id}`));
+      });
+    }, 350);
 
-    Object.values(links).forEach((link) => {
-      observer.observe(document.querySelector(`#${link.id}`));
-    });
-
-    return () => observer.disconnect();
+    return () => observer?.disconnect();
   }, [links]);
 
   return <NavigationBlockContent className={className} links={links} />;
