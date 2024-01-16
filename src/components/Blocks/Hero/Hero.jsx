@@ -23,7 +23,7 @@ const Hero = () => {
 
         <Link to={ROUTES.aboutUs}>
           <Button className="hero__link" variant="span">
-            Learn More
+            More About Us
           </Button>
         </Link>
         <dl className="hero__achievements">
