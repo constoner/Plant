@@ -1,5 +1,6 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
+import { transitionProps } from "../utils/CONSTANTS";
 
 const useScrollToAnchor = () => {
   const { pathname, hash, key } = useLocation()
@@ -17,7 +18,7 @@ const useScrollToAnchor = () => {
             behavior: 'smooth',
           })
         }
-      }, 0)
+      }, transitionProps.scrollTransition)
     }
   }, [pathname, hash, key])
 }

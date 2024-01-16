@@ -8,8 +8,12 @@ const popupProps = {
 };
 
 const transitionProps = {
+  timingOffset: 50,
   pageTransition: 300,
   linkTransition: 300,
+  get scrollTransition() {
+    return this.pageTransition + this.timingOffset;
+  },
 };
 
 const catalogMaxRank = 5;

@@ -13,7 +13,7 @@ import Footer from "../Footer/Footer";
 import ToTop from "../../misc/ToTop/ToTop";
 import Popup from "../../misc/Popup/Popup";
 
-const MainLayout = () => {
+const MainLayout = ({ children }) => {
   useScrollToAnchor();
   const nodeRef = createRef();
   const state = usePageState();
@@ -21,7 +21,7 @@ const MainLayout = () => {
   const currentOutlet = useOutlet();
 
   useEffect(() => {
-    if (location.hash !== "#!") {
+    if (location.hash === "") {
       document.documentElement.scrollTo(0, 0);
     }
   }, [location]);
@@ -38,7 +38,7 @@ const MainLayout = () => {
               timeout={transitionProps.pageTransition}
               unmountOnExit
             >
-              {(state) => (
+              {() => (
                 <div
                   className="container"
                   ref={nodeRef}
@@ -46,7 +46,7 @@ const MainLayout = () => {
                     transitionDuration: `${transitionProps.pageTransition}ms`,
                   }}
                 >
-                  {currentOutlet}
+                  {children ?? currentOutlet}
                 </div>
               )}
             </CSSTransition>
